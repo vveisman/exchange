@@ -188,7 +188,7 @@ export default function Home() {
             >
               {"Buy Bitcoin"}
             </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center'>
+            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
               <a
                 className='text-appBlue2'
                 href='https://paxful.com/buy-bitcoin'
@@ -253,7 +253,7 @@ export default function Home() {
             >
               {"Sell Bitcoin"}
             </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center'>
+            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
               Set your own rates and choose how you want to be paid.
             </p>
           </div>
@@ -308,7 +308,7 @@ export default function Home() {
             >
               {"Secure Trading"}
             </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center'>
+            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
               Bitcoin is held in secure escrow until a trade is successfully
               completed.
             </p>
@@ -391,7 +391,7 @@ export default function Home() {
             >
               {"Valueable feedback"}
             </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center'>
+            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
               Our feedback system highlights reliable, experienced users,
               helping you to trade smoothly.
             </p>
@@ -455,7 +455,7 @@ export default function Home() {
             >
               {"Free Paxful Wallet"}
             </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center'>
+            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
               Get a free{" "}
               <a
                 className='text-appBlue2'
@@ -519,7 +519,7 @@ export default function Home() {
             >
               {"Invite friends"}
             </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center'>
+            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
               Get your friends and family to{" "}
               <a
                 className='text-appBlue2'

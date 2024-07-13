@@ -124,7 +124,7 @@ const Shop = () => {
           {payments.map((item) => (
             <p
               key={item}
-              className='border whitespace-nowrap mr-2 lg:mr-0  text-[11px] px-[7px] py-[3px] border-appAsh rounded-[4px] font-semibold'
+              className='border text-[#333] whitespace-nowrap mr-2 lg:mr-0  text-[11px] px-[7px] py-[3px] border-appAsh rounded-[4px] font-semibold'
             >
               {item}
             </p>

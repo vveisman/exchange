@@ -78,6 +78,7 @@ const Shop = () => {
               {cryptos.map(({ name, src, symbol }) => {
                 return (
                   <PurchaseCoin
+                    key={symbol}
                     setSymbol={setSymbol}
                     symbol={symbol}
                     title={name}
@@ -121,7 +122,10 @@ const Shop = () => {
         </button>
         <div className='flex items-center overflow-x-scroll justify-between mt-2'>
           {payments.map((item) => (
-            <p className='border whitespace-nowrap mr-2 lg:mr-0  text-[11px] px-[7px] py-[3px] border-appAsh rounded-[4px] font-semibold'>
+            <p
+              key={item}
+              className='border whitespace-nowrap mr-2 lg:mr-0  text-[11px] px-[7px] py-[3px] border-appAsh rounded-[4px] font-semibold'
+            >
               {item}
             </p>
           ))}

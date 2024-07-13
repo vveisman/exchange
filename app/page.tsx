@@ -36,7 +36,7 @@ export default function Home() {
           Trade Bitcoin On Paxful
         </h1>
         <div className='lg:text-[22px] mb-[.5rem] font-[300] leading-relaxed max-w-[960px] lg:text-center  text-white'>
-          Join over 12 million people just like you on everyone's favorite
+          Join over 12 million people just like you on everyone&apos;s favorite
           peer-to-peer platform to buy and sell Bitcoin.
         </div>
         <Shop />
@@ -80,6 +80,7 @@ export default function Home() {
                 return (
                   <Link
                     href={"/"}
+                    key={title}
                     className='flex lg:flex-col items-center lg:items-start  lg:p-[24px] w-[98vw] lg:w-[344px] border h-[65.6] p-[16px] lg:h-[173.6px] rounded-[4px] border-appAsh'
                   >
                     <Images title={title} />
@@ -98,6 +99,7 @@ export default function Home() {
             : Buy.map(({ title, desc, src }) => {
                 return (
                   <Link
+                    key={title}
                     href={"/"}
                     className='flex lg:flex-col items-center lg:items-start  lg:p-[24px]  w-[98vw] lg:w-[344px] border h-[65.6] p-[16px] lg:h-[173.6px] rounded-[4px] border-appAsh'
                   >

@@ -197,7 +197,7 @@ const Footer = () => {
       <div className='flex  mx-auto lg:mx-0 flex-col lg:flex-row  px-1 lg:px-0 w-[93%]   justify-between'>
         {sections.map(({ name, links }, i) => {
           return (
-            <div className='mt-6'>
+            <div key={name} className='mt-6'>
               <button
                 onClick={() => (index !== i ? setIndex(i) : setIndex(null))}
                 className='flex py-[2px] w-full justify-between'
@@ -221,13 +221,17 @@ const Footer = () => {
               </button>
               <div className=' hidden lg:flex flex-col'>
                 {links.map((item) => (
-                  <p className='text-[#333]  py-1'>{item}</p>
+                  <p key={item} className='text-[#333]  py-1'>
+                    {item}
+                  </p>
                 ))}
               </div>
               {index === i && (
                 <div className=' lg:hidden flex flex-col'>
                   {links.map((item) => (
-                    <p className='text-[#333]  py-1'>{item}</p>
+                    <p key={item} className='text-[#333]  py-1'>
+                      {item}
+                    </p>
                   ))}
                 </div>
               )}
@@ -238,7 +242,10 @@ const Footer = () => {
       <div className='flex flex-col lg:flex-row mx-auto lg:mx-0  px-1 lg:px-0 w-[93%]  justify-between'>
         {legal.map(({ name, links }, i) => {
           return (
-            <div className='mt-6 flex  w-full flex-col lg:flex-row lg:justify-start'>
+            <div
+              key={name}
+              className='mt-6 flex  w-full flex-col lg:flex-row lg:justify-start'
+            >
               <button
                 onClick={() => (index !== 20 ? setIndex(20) : setIndex(null))}
                 className='flex py-[2px] w-full lg:w-max lg:mr-10 justify-between'
@@ -262,13 +269,17 @@ const Footer = () => {
               </button>
               <div className=' hidden lg:flex space-x-4 w-full'>
                 {links.map((item) => (
-                  <p className='text-[#333]  py-1'>{item}</p>
+                  <p key={item} className='text-[#333]  py-1'>
+                    {item}
+                  </p>
                 ))}
               </div>
               {index === 20 && (
                 <div className=' lg:hidden flex flex-col'>
                   {links.map((item) => (
-                    <p className='text-[#333]  py-1'>{item}</p>
+                    <p key={item} className='text-[#333]  py-1'>
+                      {item}
+                    </p>
                   ))}
                 </div>
               )}

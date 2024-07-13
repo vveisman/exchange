@@ -103,7 +103,10 @@ const Navbar = () => {
         <div className='flex pt-[2vh] flex-col px-8 w-full lg:hidden'>
           {cryptos.map(({ name, src }) => {
             return (
-              <div className='flex w-full py-5 justify-between items-center'>
+              <div
+                key={name}
+                className='flex w-full py-5 justify-between items-center'
+              >
                 <p className='text-[16px]  leading-[16px] text-[#333]'>
                   Buy {name}
                 </p>
@@ -113,7 +116,10 @@ const Navbar = () => {
           })}
           {cryptos.map(({ name, src }) => {
             return (
-              <div className='flex w-full py-5 justify-between items-center'>
+              <div
+                key={name}
+                className='flex w-full py-5 justify-between items-center'
+              >
                 <p className='text-[16px]  leading-[16px] text-[#333]'>
                   Sell {name}
                 </p>
@@ -236,7 +242,7 @@ const Navbar = () => {
             {sub && (
               <div className='absolute z-[100] h-max min-w-full max-w-[580px] py-[1vh] left-0 top-full mt-3 bg-white border border-[#d8d8d8] rounded-[4px]'>
                 {cryptos.map(({ name, src }) => {
-                  return <BuyCrypto title={name} src={src} />;
+                  return <BuyCrypto key={name} title={name} src={src} />;
                 })}
               </div>
             )}

@@ -17,6 +17,7 @@ const config: Config = {
         // docBlue: "#1b5aa4ff",
         appBlue: "#00a5ef",
         appBlue2: "#0052cc",
+        error: "#eb4a27",
         docBlack: "#404040",
         patientBlue: "#1B00EA",
         appAsh: "#d8d8d8",

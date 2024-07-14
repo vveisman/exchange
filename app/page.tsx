@@ -6,6 +6,8 @@ import Shop from "@/components/Shop";
 import { useState } from "react";
 import { Buy, sell } from "@/data/data";
 import Images from "@/components/Images";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const serrat = Montserrat({
   subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
@@ -15,8 +17,9 @@ export default function Home() {
   const [buy, setBuy] = useState(false);
   return (
     <main className='w-full relative h-full'>
+      <Navbar />
       <div className='bg-[#3db8f5] mt-[48px] lg:mt-0 p-[.5rem] center w-full lg:h-[60px]'>
-        <Link href={"/"}>
+        <Link href={"https://paxful.com/university/trade-gift-card-p2p-fee/"}>
           <h4
             style={serrat.style}
             className='mb-0 text-base font-semibold text-white text-center'
@@ -117,9 +120,12 @@ export default function Home() {
                 );
               })}
         </div>
-        <button className='px-[16px] py-[12px] rounded-[8px] bg-appBlue text-white font-semibold mt-8'>
+        <Link
+          href={"https://paxful.com/buy-bitcoin?hasScroll=true"}
+          className='px-[16px] py-[12px] rounded-[8px] bg-appBlue hover:bg-[#0091d2] text-white font-semibold mt-8'
+        >
           Start Trading
-        </button>
+        </Link>
       </section>
       <section className='flex flex-col w-full  items-center py-[20px]'>
         <h2
@@ -543,13 +549,17 @@ export default function Home() {
           Explore thousands of offers to buy and sell Bitcoin to kickstart your
           trading journey.
         </p>
-        <button className='px-[16px] py-[12px] rounded-[8px] bg-appBlue text-white font-semibold mt-4'>
+        <Link
+          href={"https://paxful.com/register"}
+          className='px-[16px] hover:bg-[#0091d2] py-[12px] rounded-[8px] bg-appBlue text-white font-semibold mt-4'
+        >
           Create Your Account
-        </button>
+        </Link>
         <div className='w-full lg:w-[70%] relative mt-1 h-[30vh]'>
           <Image className='object-cover' src={"/bg.webp"} fill alt='bg' />
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

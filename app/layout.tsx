@@ -21,12 +21,12 @@ export default function RootLayout({
     <html lang='en'>
       <AppWrapper>
         <body className={`${inter.className} relative`}>
-          <Navbar />
+          {/* <Navbar /> */}
           <main className='flex flex-col items-center justify-start '>
             {children}
           </main>
-          <Footer />
-          <div className=' bg-appPurple flex items-center rounded-l-[30px] rounded-tr-[8px] rounded-br-[30px] p-[8px] text-white fixed bottom-6 right-4'>
+          {/* <Footer /> */}
+          <div className=' bg-appPurple px-[14px] flex items-center rounded-l-[30px] rounded-tr-[8px] rounded-br-[30px] p-[8px] text-white fixed bottom-[10vh] right-6'>
             <svg
               width='16'
               height='16'

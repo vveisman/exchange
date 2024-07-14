@@ -28,7 +28,7 @@ const Shop = () => {
   return (
     <div className='mx-auto max-w-[526px] pt-[1rem] pb-[2rem] px-[2rem] w-full flex flex-col h-auto items-center rounded-lg bg-white'>
       <div className='space-x-5'>
-        <button className='rounded-[4px] min-h-[32px] text-[.875rem] font-semibold min-w-[89.63px] text-white bg-appBlue'>
+        <button className='rounded-[4px] min-h-[32px] hover:bg-[#0091d2] text-[.875rem] font-semibold min-w-[89.63px] text-white bg-appBlue'>
           Buy
         </button>
         <button className='rounded-[4px] border border-appash text-[.875rem] font-semibold min-h-[32px] min-w-[89.63px] text-[#333]'>
@@ -158,7 +158,7 @@ const Shop = () => {
         </button>
         <p className='text-[#333] mt-1'>Minimum: 10 USD</p>
       </div>
-      <button className='w-full bg-appBlue rounded-[4px] mt-4 text-white font-semibold py-[11px]'>
+      <button className='w-full bg-appBlue hover:bg-[#0091d2] rounded-[4px] mt-4 text-white font-semibold py-[11px]'>
         Find Offers
       </button>
     </div>

@@ -203,14 +203,16 @@ const Navbar = () => {
             router.includes("/about") ? "text-docBlue" : ""
           }`}
         >
-          <Link href={"/create"}>Create an Offer</Link>
+          <Link href={"https://paxful.com/list-crypto-buy-sell-ad"}>
+            Create an Offer
+          </Link>
         </li>
         <li
           className={`${listStyle} ${
             router.includes("/wallet") ? "text-docBlue" : ""
           }`}
         >
-          <Link href={"/media"}>Wallet</Link>
+          <Link href={"https://paxful.com/bitcoin-wallet"}>Wallet</Link>
         </li>
         <OutsideClickHandler onOutsideClick={() => showSub(false)}>
           <li
@@ -253,15 +255,15 @@ const Navbar = () => {
             router.includes("/consultation") ? "text-docBlue" : ""
           }`}
         >
-          <Link href={"/consultation"}>Become a Vendor</Link>
+          <Link href={"https://paxful.com/vendors"}>Become a Vendor</Link>
         </li>
       </ul>
       <div className='space-x-5 flex items-center'>
-        <Link href={"/"} className='font-semibold text-[#333333]'>
+        <Link href={"/login"} className='font-semibold text-[#333333]'>
           Log In
         </Link>
         <Link
-          href={"/"}
+          href={"https://paxful.com/register"}
           className='font-semibold text-white hover:bg-[#0091d2] bg-[#00a5ef] rounded-[4px] py-[.25rem] px-[1rem]'
         >
           Register

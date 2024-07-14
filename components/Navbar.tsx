@@ -66,7 +66,7 @@ const Navbar = () => {
         className={`w-full lg:w-[45vw] overflow-x-hidden lg:overflow-x-visible ${
           !isOpen
             ? "-translate-x-full opacity-0"
-            : "translate-x-0 opacity-100 z-10"
+            : "translate-x-0 opacity-100 z-50"
         }  h-[91vh] overflow-y-scroll py-[6vh] lg:py-0 lg:overflow-y-visible lg:h-full  duration-300 lg:translate-x-0  lg:opacity-100 transition-all ease-linear  lg:flex-row items-start justify-start lg:justify-center lg:space-x-8 lg:items-center absolute lg:relative top-[9vh] lg:top-0 left-0 flex flex-col bg-white`}
       >
         <button
@@ -86,7 +86,7 @@ const Navbar = () => {
             <path d='M12 2.2c-5.4 0-9.8 4.4-9.8 9.8s4.4 9.8 9.8 9.8 9.8-4.4 9.8-9.8-4.4-9.8-9.8-9.8zm0 1.5c.4 0 .8 0 1.2.1l-.9 3.5-3.5 1c-.2 0-.4.2-.5.4l-.6 1.2-2.8-2.1C6.4 5.4 9 3.7 12 3.7zm0 16.5c-4.5 0-8.2-3.7-8.2-8.3 0-1 .2-2 .5-2.9l3.3 2.5c.1.1.3.1.4.1h.2c.2-.1.4-.2.5-.4l.8-1.7 3.7-.9c.3-.1.5-.3.5-.5l1-4c3.2 1.1 5.5 4.2 5.5 7.8 0 4.6-3.7 8.3-8.2 8.3z'></path>
           </svg>
           {/* </button> */}
-          <p>English</p>
+          <p className='text-[#333]'>English</p>
           <svg
             width='24'
             height='24'
@@ -183,7 +183,7 @@ const Navbar = () => {
             >
               <path d='M15.989 10.956a.652.652 0 00-.179-.355c-.21-.215-.455-.26-.734-.136a5.372 5.372 0 01-2.325.532 5.334 5.334 0 01-2.785-.76 5.593 5.593 0 01-2.02-2.064 5.634 5.634 0 01-.744-2.846c0-.799.154-1.558.464-2.277.31-.72.756-1.35 1.341-1.892.225-.215.276-.466.153-.75-.115-.285-.323-.42-.622-.407A7.66 7.66 0 005.58.715a7.799 7.799 0 00-2.402 1.714 7.954 7.954 0 00-1.592 2.518A8.076 8.076 0 001 7.995c0 1.084.207 2.12.622 3.106a8.09 8.09 0 001.673 2.554 7.9 7.9 0 002.5 1.71A7.482 7.482 0 008.833 16a7.541 7.541 0 004.217-1.266 7.823 7.823 0 002.892-3.383.68.68 0 00.046-.395z'></path>
             </svg>
-            <p>Dark theme</p>
+            <p className='text-[#333]'>Dark theme</p>
           </div>
           <button
             onClick={() => changeTheme(!dark)}

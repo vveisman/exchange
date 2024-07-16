@@ -184,7 +184,7 @@ const Index = () => {
             }}
             className={`w-[100%] h-[47.6px] px-2 focus:outline-appBlue hover:border-[#626262] border ${
               error1 ? "border-error" : "border-appAsh "
-            } border-appAsh rounded-[4px]`}
+            } border-appAsh rounded-[4px] text-[#333]`}
             type='text'
           />
           {error1 && (
@@ -223,7 +223,7 @@ const Index = () => {
                 }}
                 className={`w-[100%] px-2 focus:outline-appBlue hover:border-[#626262] h-[47.6px] border ${
                   error2 ? "border-error" : "border-appAsh "
-                } rounded-[4px]`}
+                } rounded-[4px] text-[#333]`}
                 type='text'
               />
             ) : (
@@ -238,7 +238,7 @@ const Index = () => {
                 }}
                 className={`w-[100%] px-2 focus:outline-appBlue hover:border-[#626262] h-[47.6px] border ${
                   error2 ? "border-error" : "border-appAsh "
-                } rounded-[4px]`}
+                } rounded-[4px] text-[#333]`}
                 type='password'
               />
             )}

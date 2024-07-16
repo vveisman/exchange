@@ -35,6 +35,24 @@ const Navbar = () => {
   //
   return (
     <div className='relative     shadow-sm w-full shadow-slate-300 z-20   flex items-center justify-between px-[2vw] lg:px-[7vw] bg-white h-[9vh] '>
+      {
+        <div className=' bg-appPurple px-[14px] flex items-center rounded-l-[30px] rounded-tr-[8px] rounded-br-[30px] p-[8px] text-white fixed bottom-[10vh] right-6'>
+          <svg
+            width='16'
+            height='16'
+            viewBox='0 0 16 16'
+            fill='white'
+            className='mr-2 reflect-element'
+          >
+            <path
+              fill-rule='evenodd'
+              d='M8 2a6 6 0 100 12A6 6 0 008 2zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM7 3.5a1 1 0 00-.707.293l-.5.5a1 1 0 001.414 1.414l.207-.207h1.172l.393.393-1.426.713A1 1 0 007 7.5V8a1 1 0 001.993.122l1.454-.728A1 1 0 0011 6.5v-1a1 1 0 00-.293-.707l-1-1A1 1 0 009 3.5H7z'
+              clip-rule='evenodd'
+            ></path>
+          </svg>
+          <span className='text-[.875rem] font-semibold text-white'>Help</span>
+        </div>
+      }
       <div
         onClick={toggleMenu}
         className={`lg:hidden flex absolute left-2  items-center justifiy-center `}

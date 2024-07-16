@@ -139,7 +139,7 @@ const Shop = () => {
           className='w-[100%] relative px-2 cursor-pointer active:shadow-sm active:shadow-appAsh flex justify-between items-center h-[49.6px] hover:bg-[#f8f8f8] active:bg-[#f8f8f8] rounded-[4px] border border-appAsh'
         >
           <h4 className='text-[#333] ml-2'>Enter Amount</h4>
-          <button className='border flex items-center text-[#333] font-semibold border-appBlue rounded-[4px] px-[12px] py-[3px]'>
+          <p className='border flex items-center text-[#333] font-semibold border-appBlue rounded-[4px] px-[12px] py-[3px]'>
             USD
             <svg
               width='16'
@@ -154,7 +154,7 @@ const Shop = () => {
                 clip-rule='evenodd'
               ></path>
             </svg>
-          </button>
+          </p>
         </button>
         <p className='text-[#333] mt-1'>Minimum: 10 USD</p>
       </div>

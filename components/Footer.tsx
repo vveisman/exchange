@@ -36,9 +36,9 @@ const Footer = () => {
               className='mr-2 reflect-element'
             >
               <path
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M8 2a6 6 0 100 12A6 6 0 008 2zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM7 3.5a1 1 0 00-.707.293l-.5.5a1 1 0 001.414 1.414l.207-.207h1.172l.393.393-1.426.713A1 1 0 007 7.5V8a1 1 0 001.993.122l1.454-.728A1 1 0 0011 6.5v-1a1 1 0 00-.293-.707l-1-1A1 1 0 009 3.5H7z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
             </svg>
             <p className='font-semibold text-[#333]'>FAQ & Help Center</p>
@@ -184,9 +184,9 @@ const Footer = () => {
               className='mr-2 reflect-element'
             >
               <path
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M8 2a6 6 0 100 12A6 6 0 008 2zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM7 3.5a1 1 0 00-.707.293l-.5.5a1 1 0 001.414 1.414l.207-.207h1.172l.393.393-1.426.713A1 1 0 007 7.5V8a1 1 0 001.993.122l1.454-.728A1 1 0 0011 6.5v-1a1 1 0 00-.293-.707l-1-1A1 1 0 009 3.5H7z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
             </svg>
             <p className='font-semibold text-[#333]'>FAQ & Help Center</p>
@@ -213,9 +213,9 @@ const Footer = () => {
                   } transition-all duration-200 d-md-none`}
                 >
                   <path
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M2.707 4.293L8 9.585l5.293-5.292a1 1 0 111.414 1.414l-6 6a.996.996 0 01-.53.277l-.118.014h-.118a.997.997 0 01-.648-.29l-6-6a1 1 0 011.414-1.415z'
-                    clip-rule='evenodd'
+                    clipRule='evenodd'
                   ></path>
                 </svg>
               </button>
@@ -261,9 +261,9 @@ const Footer = () => {
                   } transition-all duration-200 d-md-none`}
                 >
                   <path
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M2.707 4.293L8 9.585l5.293-5.292a1 1 0 111.414 1.414l-6 6a.996.996 0 01-.53.277l-.118.014h-.118a.997.997 0 01-.648-.29l-6-6a1 1 0 011.414-1.415z'
-                    clip-rule='evenodd'
+                    clipRule='evenodd'
                   ></path>
                 </svg>
               </button>
@@ -344,12 +344,12 @@ const Footer = () => {
                 y1='172.4904'
                 y2='155.708'
               >
-                <stop offset='0' stop-color='#00a0ff'></stop>
-                <stop offset='.00657445' stop-color='#00a1ff'></stop>
-                <stop offset='.2601' stop-color='#00beff'></stop>
-                <stop offset='.5122' stop-color='#00d2ff'></stop>
-                <stop offset='.7604' stop-color='#00dfff'></stop>
-                <stop offset='1' stop-color='#00e3ff'></stop>
+                <stop offset='0' stopColor='#00a0ff'></stop>
+                <stop offset='.00657445' stopColor='#00a1ff'></stop>
+                <stop offset='.2601' stopColor='#00beff'></stop>
+                <stop offset='.5122' stopColor='#00d2ff'></stop>
+                <stop offset='.7604' stopColor='#00dfff'></stop>
+                <stop offset='1' stopColor='#00e3ff'></stop>
               </linearGradient>
               <linearGradient
                 id='googlePlayIconIdB'
@@ -360,10 +360,10 @@ const Footer = () => {
                 y1='161.1987'
                 y2='161.1987'
               >
-                <stop offset='0' stop-color='#ffe000'></stop>
-                <stop offset='.4087' stop-color='#ffbd00'></stop>
-                <stop offset='.7754' stop-color='#ffa500'></stop>
-                <stop offset='1' stop-color='#ff9c00'></stop>
+                <stop offset='0' stopColor='#ffe000'></stop>
+                <stop offset='.4087' stopColor='#ffbd00'></stop>
+                <stop offset='.7754' stopColor='#ffa500'></stop>
+                <stop offset='1' stopColor='#ff9c00'></stop>
               </linearGradient>
               <linearGradient
                 id='googlePlayIconIdC'
@@ -374,8 +374,8 @@ const Footer = () => {
                 y1='158.904'
                 y2='136.1457'
               >
-                <stop offset='0' stop-color='#ff3a44'></stop>
-                <stop offset='1' stop-color='#googlePlayIconIdC31162'></stop>
+                <stop offset='0' stopColor='#ff3a44'></stop>
+                <stop offset='1' stopColor='#googlePlayIconIdC31162'></stop>
               </linearGradient>
               <linearGradient
                 id='googlePlayIconIdD'
@@ -386,53 +386,53 @@ const Footer = () => {
                 y1='181.0239'
                 y2='170.8614'
               >
-                <stop offset='0' stop-color='#32a071'></stop>
-                <stop offset='.0685' stop-color='#2da771'></stop>
-                <stop offset='.4762' stop-color='#15cf74'></stop>
-                <stop offset='.8009' stop-color='#06e775'></stop>
-                <stop offset='1' stop-color='#00f076'></stop>
+                <stop offset='0' stopColor='#32a071'></stop>
+                <stop offset='.0685' stopColor='#2da771'></stop>
+                <stop offset='.4762' stopColor='#15cf74'></stop>
+                <stop offset='.8009' stopColor='#06e775'></stop>
+                <stop offset='1' stopColor='#00f076'></stop>
               </linearGradient>
               <path
                 d='m46.6 9.4c0 .8-.2 1.5-.7 2-.6.6-1.3.9-2.2.9s-1.6-.3-2.2-.9-.9-1.3-.9-2.2.3-1.6.9-2.2 1.3-.9 2.2-.9c.4 0 .8.1 1.2.3s.7.4.9.7l-.5.5c-.4-.5-.9-.7-1.6-.7-.7-.1-1.2.1-1.7.6-.5.4-.7 1-.7 1.7s.2 1.3.7 1.7 1 .7 1.6.7c.7 0 1.2-.2 1.7-.7.3-.3.5-.7.5-1.2h-2.2v-.7h2.9c.1.1.1.3.1.4z'
                 stroke='#fff'
-                stroke-miterlimit='10'
-                stroke-width='.2'
+                strokeMiterlimit='10'
+                strokeWidth='.2'
               ></path>
               <path
                 d='m51.2 6.9h-2.7v1.9h2.5v.7h-2.5v1.9h2.7v.7h-3.5v-6h3.5z'
                 stroke='#fff'
-                stroke-miterlimit='10'
-                stroke-width='.2'
+                strokeMiterlimit='10'
+                strokeWidth='.2'
               ></path>
               <path
                 d='m54.5 12.2h-.8v-5.3h-1.7v-.7h4.1v.7h-1.7v5.3z'
                 stroke='#fff'
-                stroke-miterlimit='10'
-                stroke-width='.2'
+                strokeMiterlimit='10'
+                strokeWidth='.2'
               ></path>
               <path
                 d='m59.1 12.2v-6h.8v6z'
                 stroke='#fff'
-                stroke-miterlimit='10'
-                stroke-width='.2'
+                strokeMiterlimit='10'
+                strokeWidth='.2'
               ></path>
               <path
                 d='m63.3 12.2h-.8v-5.3h-1.7v-.7h4.2v.7h-1.7z'
                 stroke='#fff'
-                stroke-miterlimit='10'
-                stroke-width='.2'
+                strokeMiterlimit='10'
+                strokeWidth='.2'
               ></path>
               <path
                 d='m72.8 11.4c-.6.6-1.3.9-2.2.9s-1.6-.3-2.2-.9-.9-1.3-.9-2.2.3-1.6.9-2.2 1.3-.9 2.2-.9 1.6.3 2.2.9.9 1.3.9 2.2-.3 1.6-.9 2.2zm-3.8-.5c.4.4 1 .7 1.6.7s1.2-.2 1.6-.7c.4-.4.7-1 .7-1.7s-.2-1.3-.7-1.7c-.4-.4-1-.7-1.6-.7s-1.2.2-1.6.7c-.4.4-.7 1-.7 1.7s.2 1.3.7 1.7z'
                 stroke='#fff'
-                stroke-miterlimit='10'
-                stroke-width='.2'
+                strokeMiterlimit='10'
+                strokeWidth='.2'
               ></path>
               <path
                 d='m74.8 12.2v-6h.9l2.9 4.7v-1.2-3.5h.8v6h-.8l-3.1-4.9v1.2 3.7z'
                 stroke='#fff'
-                stroke-miterlimit='10'
-                stroke-width='.2'
+                strokeMiterlimit='10'
+                strokeWidth='.2'
               ></path>
               <path d='m67.3 21c-2.4 0-4.3 1.8-4.3 4.3 0 2.4 1.9 4.3 4.3 4.3s4.3-1.8 4.3-4.3c0-2.6-1.9-4.3-4.3-4.3zm0 6.8c-1.3 0-2.4-1.1-2.4-2.6s1.1-2.6 2.4-2.6 2.4 1 2.4 2.6c0 1.5-1.1 2.6-2.4 2.6zm-9.3-6.8c-2.4 0-4.3 1.8-4.3 4.3 0 2.4 1.9 4.3 4.3 4.3s4.3-1.8 4.3-4.3c0-2.6-1.9-4.3-4.3-4.3zm0 6.8c-1.3 0-2.4-1.1-2.4-2.6s1.1-2.6 2.4-2.6 2.4 1 2.4 2.6c0 1.5-1.1 2.6-2.4 2.6zm-11.1-5.5v1.8h4.3c-.1 1-.5 1.8-1 2.3-.6.6-1.6 1.3-3.3 1.3-2.7 0-4.7-2.1-4.7-4.8s2.1-4.8 4.7-4.8c1.4 0 2.5.6 3.3 1.3l1.3-1.3c-1.1-1-2.5-1.8-4.5-1.8-3.6 0-6.7 3-6.7 6.6s3.1 6.6 6.7 6.6c2 0 3.4-.6 4.6-1.9 1.2-1.2 1.6-2.9 1.6-4.2 0-.4 0-.8-.1-1.1zm45.4 1.4c-.4-1-1.4-2.7-3.6-2.7s-4 1.7-4 4.3c0 2.4 1.8 4.3 4.2 4.3 1.9 0 3.1-1.2 3.5-1.9l-1.4-1c-.5.7-1.1 1.2-2.1 1.2s-1.6-.4-2.1-1.3l5.7-2.4zm-5.8 1.4c0-1.6 1.3-2.5 2.2-2.5.7 0 1.4.4 1.6.9zm-4.7 4.1h1.9v-12.5h-1.9zm-3-7.3c-.5-.5-1.3-1-2.3-1-2.1 0-4.1 1.9-4.1 4.3s1.9 4.2 4.1 4.2c1 0 1.8-.5 2.2-1h.1v.6c0 1.6-.9 2.5-2.3 2.5-1.1 0-1.9-.8-2.1-1.5l-1.6.7c.5 1.1 1.7 2.5 3.8 2.5 2.2 0 4-1.3 4-4.4v-7.6h-1.8zm-2.2 5.9c-1.3 0-2.4-1.1-2.4-2.6s1.1-2.6 2.4-2.6 2.3 1.1 2.3 2.6-1 2.6-2.3 2.6zm24.4-11.1h-4.5v12.5h1.9v-4.7h2.6c2.1 0 4.1-1.5 4.1-3.9s-2-3.9-4.1-3.9zm.1 6h-2.7v-4.3h2.7c1.4 0 2.2 1.2 2.2 2.1-.1 1.1-.9 2.2-2.2 2.2zm11.5-1.8c-1.4 0-2.8.6-3.3 1.9l1.7.7c.4-.7 1-.9 1.7-.9 1 0 1.9.6 2 1.6v.1c-.3-.2-1.1-.5-1.9-.5-1.8 0-3.6 1-3.6 2.8 0 1.7 1.5 2.8 3.1 2.8 1.3 0 1.9-.6 2.4-1.2h.1v1h1.8v-4.8c-.2-2.2-1.9-3.5-4-3.5zm-.2 6.9c-.6 0-1.5-.3-1.5-1.1 0-1 1.1-1.3 2-1.3.8 0 1.2.2 1.7.4-.2 1.2-1.2 2-2.2 2zm10.5-6.6-2.1 5.4h-.1l-2.2-5.4h-2l3.3 7.6-1.9 4.2h1.9l5.1-11.8zm-16.8 8h1.9v-12.5h-1.9z'></path>
               <path
@@ -491,9 +491,9 @@ const Footer = () => {
               <Link className='' href={"/"}>
                 <svg width='16' height='16' viewBox='0 0 16 16' fill='#626262'>
                   <path
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42a3.918 3.918 0 00-1.417.923c-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.851.174 1.432.372 1.942.204.525.478.973.923 1.417a3.9 3.9 0 001.417.923c.51.197 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.851-.04 1.432-.175 1.942-.372a3.932 3.932 0 001.417-.923 3.9 3.9 0 00.923-1.417c.197-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.851-.175-1.433-.372-1.942a3.926 3.926 0 00-.923-1.417A3.897 3.897 0 0013.24.42c-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.135 0 2.39.01 3.233.047.78.037 1.204.166 1.485.277.375.145.64.318.921.597.28.28.453.546.598.921.109.281.24.705.275 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.204-.28 1.485-.15.375-.32.64-.6.921-.279.28-.549.453-.92.598-.28.109-.71.24-1.49.275-.849.038-1.099.047-3.239.047-2.14 0-2.39-.01-3.24-.05-.78-.04-1.21-.17-1.49-.28a2.49 2.49 0 01-.92-.6 2.432 2.432 0 01-.6-.92c-.11-.28-.239-.71-.28-1.49-.03-.84-.04-1.099-.04-3.229s.01-2.39.04-3.24c.041-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452a4.108 4.108 0 100 8.215 4.108 4.108 0 000-8.215zm0 6.775a2.666 2.666 0 110-5.334 2.666 2.666 0 110 5.334zm5.23-6.937a.96.96 0 11-1.92-.001.96.96 0 011.92.001z'
-                    clip-rule='evenodd'
+                    clipRule='evenodd'
                   ></path>
                 </svg>
               </Link>
@@ -509,9 +509,9 @@ const Footer = () => {
               <Link className='' href={"/"}>
                 <svg width='16' height='16' viewBox='0 0 16 16' fill='#626262'>
                   <path
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M15.663 4.137a2.005 2.005 0 00-1.392-1.392c-1.246-.334-6.264-.334-6.264-.334s-5.004-.007-6.264.334A2.005 2.005 0 00.351 4.137a20.844 20.844 0 00-.348 3.87 20.844 20.844 0 00.348 3.855 2.005 2.005 0 001.392 1.392c1.246.335 6.264.335 6.264.335s5.004 0 6.264-.335a2.004 2.004 0 001.392-1.392c.23-1.272.342-2.563.334-3.855a20.837 20.837 0 00-.334-3.87zM6.406 10.4V5.605l4.176 2.402z'
-                    clip-rule='evenodd'
+                    clipRule='evenodd'
                   ></path>
                 </svg>
               </Link>
@@ -520,9 +520,9 @@ const Footer = () => {
               <Link className='' href={"/"}>
                 <svg width='16' height='16' viewBox='0 0 16 16' fill='#626262'>
                   <path
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M7.984 13.02c-1.196 0-2.038-.26-2.575-.798a.3.3 0 010-.422.313.313 0 01.423 0c.42.42 1.124.629 2.152.629s1.728-.2 2.146-.62a.31.31 0 01.42 0c.11.12.11.31 0 .43-.54.54-1.377.8-2.575.8zM5.58 7.97a1.13 1.13 0 00-1.118 1.118c0 .607.51 1.1 1.118 1.1a1.1 1.1 0 001.101-1.1c0-.608-.493-1.118-1.1-1.118zm4.822 0c-.61 0-1.118.51-1.118 1.118 0 .607.509 1.1 1.118 1.1a1.1 1.1 0 001.1-1.1c0-.608-.492-1.118-1.1-1.118zM.812 9.96c0-.184.016-.363.046-.54A1.815 1.815 0 010 7.878c0-.998.818-1.809 1.817-1.809a1.8 1.8 0 011.198.455c1.237-.794 2.904-1.294 4.74-1.328l1.209-3.683.269.064.01.001 2.816.662a1.491 1.491 0 012.864.583 1.49 1.49 0 01-1.488 1.489 1.49 1.49 0 01-1.486-1.487l-2.567-.608-.978 2.985c1.766.07 3.364.57 4.562 1.347.33-.31.763-.48 1.222-.48A1.81 1.81 0 0116 7.878c0 .658-.36 1.257-.919 1.577.02.17.04.329.04.499-.01 2.625-3.204 4.762-7.147 4.762l-.022.006c-3.937 0-7.14-2.137-7.14-4.761z'
-                    clip-rule='evenodd'
+                    clipRule='evenodd'
                   ></path>
                 </svg>
               </Link>

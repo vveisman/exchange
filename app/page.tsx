@@ -147,15 +147,15 @@ export default function Home() {
             >
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M27 19h2v2h2v-2h2v2.126a4.002 4.002 0 012.063 6.447A4 4 0 0133 35v2h-2v-2h-2v2h-2v-2h-2v-2h2V23h-2v-2h2v-2zm2 14h4a2 2 0 100-4h-4v4zm0-6h3a2 2 0 100-4h-3v4z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M30 44c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zm0 2c9.941 0 18-8.059 18-18s-8.059-18-18-18-18 8.059-18 18 8.059 18 18 18z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
@@ -173,9 +173,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M0 5a3 3 0 013-3h20a3 3 0 013 3v18a3 3 0 01-3 3H3a3 3 0 01-3-3V5zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h20a1 1 0 001-1V5a1 1 0 00-1-1H3z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
@@ -183,9 +183,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M12.293 19.707a1 1 0 010-1.414L16.586 14l-4.293-4.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
             </svg>
             <strong
@@ -212,15 +212,15 @@ export default function Home() {
             >
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M27 19h2v2h2v-2h2v2.126a4.002 4.002 0 012.063 6.447A4 4 0 0133 35v2h-2v-2h-2v2h-2v-2h-2v-2h2V23h-2v-2h2v-2zm2 14h4a2 2 0 100-4h-4v4zm0-6h3a2 2 0 100-4h-3v4z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M30 44c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zm0 2c9.941 0 18-8.059 18-18s-8.059-18-18-18-18 8.059-18 18 8.059 18 18 18z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
@@ -238,9 +238,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M0 5a3 3 0 013-3h20a3 3 0 013 3v18a3 3 0 01-3 3H3a3 3 0 01-3-3V5zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h20a1 1 0 001-1V5a1 1 0 00-1-1H3z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
@@ -248,9 +248,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M12.293 19.707a1 1 0 010-1.414L16.586 14l-4.293-4.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
             </svg>
             <strong
@@ -271,16 +271,16 @@ export default function Home() {
             >
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M23.329 43.012l3.372 2.88a2 2 0 002.598 0l16-13.659A2 2 0 0046 30.712V9.76a2 2 0 00-1.663-1.972l-5.562-.95A2 2 0 0139 7.76v20.95a2 2 0 01-.702 1.522l-14.97 12.78z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
                 opacity='0.15'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M21 1.985l16.505 2.818A3 3 0 0140 7.761v20.95a3 3 0 01-1.052 2.283l-16 13.658a3 3 0 01-3.896 0l-16-13.659A3 3 0 012 28.713V7.76a3 3 0 012.495-2.958L21 1.985zm0 2.03L4.832 6.774A1 1 0 004 7.76v20.95a1 1 0 00.35.761l16 13.659a1 1 0 001.3 0l16-13.659a1 1 0 00.35-.76V7.76a1 1 0 00-.832-.986L21 4.015z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-bg-fill, #ffffff)'
@@ -293,9 +293,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M21 7.985L31.505 9.78A3 3 0 0134 12.736v13.098a3 3 0 01-1.052 2.281l-10 8.537a3 3 0 01-3.896 0l-10-8.537A3 3 0 018 25.834V12.736a3 3 0 012.495-2.957L21 7.985zm0 2.03L10.832 11.75a1 1 0 00-.832.985v13.098a1 1 0 00.35.76l10 8.537a1 1 0 001.3 0l10-8.537a1 1 0 00.35-.76V12.736a1 1 0 00-.832-.986L21 10.014z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-bg-fill, #ffffff)'
@@ -303,9 +303,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M21 19a2 2 0 100 4 2 2 0 000-4zm-4 2a4 4 0 118 0 4 4 0 01-8 0z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
             </svg>
             <strong
@@ -327,9 +327,9 @@ export default function Home() {
             >
               <path
                 fill='var(--icons-bg-fill, #ffffff)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M11.273 8.545c1.07-2.332 4.384-2.332 5.454 0l1.27 2.77A11 11 0 0119 15.903V28L9 40V15.903c0-1.584.342-3.149 1.002-4.588l1.271-2.77z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='#00A5EF'
@@ -338,15 +338,15 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M13.091 9.379a1 1 0 011.818 0l1.271 2.77a9 9 0 01.82 3.754V16h-6v-.097a9 9 0 01.82-3.754l1.271-2.77zM11 18v20l-2 2V15.903c0-1.584.342-3.149 1.002-4.588l1.271-2.77c1.07-2.332 4.384-2.332 5.454 0l1.27 2.77A11 11 0 0119 15.903V30.5h-2V18h-6z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-bg-fill, #ffffff)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M31.273 8.545c1.07-2.332 4.384-2.332 5.454 0l1.27 2.77A11 11 0 0139 15.903V40L29 28V15.903a11 11 0 011.002-4.588l1.271-2.77z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='#00A5EF'
@@ -355,21 +355,21 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M33.091 9.379a1 1 0 011.818 0l1.271 2.77a9 9 0 01.82 3.754V16h-6v-.097a9 9 0 01.82-3.754l1.271-2.77zM31 18v12.5h-2V15.903a11 11 0 011.002-4.588l1.271-2.77c1.07-2.332 4.384-2.332 5.454 0l1.27 2.77A11 11 0 0139 15.903V40l-2-2V18h-6z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M25.747 1.081c-.762-1.369-2.732-1.369-3.494 0L18.39 8.013A11 11 0 0017 13.367v15.304l-6.653 9.03-5.553 2.578C1.879 41.632 2.844 46 6.057 46H19v-3h10v3h12.943c3.213 0 4.178-4.368 1.263-5.721l-5.553-2.578L31 28.67V13.367a11 11 0 00-1.39-5.354l-3.863-6.932zm-5.61 7.906L24 2.055l3.862 6.932A9 9 0 0129 13.367V41H19V13.367a9 9 0 011.138-4.38zM17 32.043l-5.347 7.256-6.017 2.794c-.972.451-.65 1.907.42 1.907H17V32.043zm14 0l5.347 7.256 6.017 2.794c.972.451.65 1.907-.42 1.907H31V32.043z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M24 13a1 1 0 00-1 1h-2a3 3 0 116 0h-2a1 1 0 00-1-1z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
@@ -386,9 +386,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M9 35a5 5 0 00-5 5 1 1 0 01-1 1 1 1 0 00-1 1v2a2 2 0 002 2h40a2 2 0 002-2v-2a1 1 0 00-1-1 1 1 0 01-1-1 5 5 0 00-10 0 1 1 0 01-1 1 2 2 0 00-2 2 1 1 0 11-2 0 1 1 0 10-2 0 1 1 0 11-2 0 3 3 0 10-6 0 1 1 0 11-2 0 2 2 0 00-2-2 1 1 0 01-1-1 5 5 0 00-5-5zm17.334 5.505A4.998 4.998 0 0022 38a4.995 4.995 0 00-4.143 2.2 3.995 3.995 0 00-1.913-1.088 7.001 7.001 0 00-13.893.041A3.001 3.001 0 000 42v2a4 4 0 004 4h40a4 4 0 004-4v-2c0-1.325-.86-2.45-2.05-2.847a7.001 7.001 0 00-13.894-.04A4.003 4.003 0 0029.8 40.6 2.987 2.987 0 0028 40c-.616 0-1.19.186-1.666.505z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
             </svg>
             <strong
@@ -410,9 +410,9 @@ export default function Home() {
             >
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M30 4a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM8 16a3 3 0 00-3 3v24a3 3 0 003 3h30a3 3 0 003-3V23a3 3 0 00-3-3h-1v-1a3 3 0 00-3-3H8zm27 4v-1a1 1 0 00-1-1H8a1 1 0 00-1 1v1h28zM7 22v21a1 1 0 001 1h30a1 1 0 001-1V23a1 1 0 00-1-1H7z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-bg-fill, #ffffff)'
@@ -420,9 +420,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M32 32a3 3 0 013-3h6a3 3 0 013 3v2a3 3 0 01-3 3h-6a3 3 0 01-3-3v-2zm3-1a1 1 0 00-1 1v2a1 1 0 001 1h6a1 1 0 001-1v-2a1 1 0 00-1-1h-6z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
@@ -435,9 +435,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M21 6c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10S26.523 6 21 6zM9 16C9 9.373 14.373 4 21 4s12 5.373 12 12-5.373 12-12 12S9 22.627 9 16z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='#00A5EF'
@@ -446,9 +446,9 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M18.414 18.606v-6.485H17v-2h1.414V9h1.414v1.121h1.414V9h1.415v1.202a3.122 3.122 0 011.878 4.79 3.121 3.121 0 01-1.878 5.614v1.121h-1.415v-1.12h-1.414v1.12h-1.414v-1.12H17v-2h1.414zm1.414 0h2.829a1.121 1.121 0 000-2.242h-2.829v2.242zm0-4.242V12.12h2.122a1.121 1.121 0 010 2.243h-2.122z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
@@ -498,21 +498,21 @@ export default function Home() {
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M24 8a2 2 0 100 4 2 2 0 000-4zm-4 2a4 4 0 118 0 4 4 0 01-8 0z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-primary, #0097db)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M16 12a8 8 0 1113.253 6.034 4.705 4.705 0 00-1.203-1.013C26.965 16.371 25.53 16 24 16c-1.53 0-2.965.37-4.05 1.021-.451.271-.87.61-1.203 1.012A7.982 7.982 0 0116 12zm4.423 7.158A7.967 7.967 0 0024 20c1.286 0 2.5-.303 3.577-.842a2.912 2.912 0 00-.556-.422C26.296 18.301 25.231 18 24 18c-1.23 0-2.296.301-3.021.736-.232.14-.415.282-.556.422zM24 2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10S29.523 2 24 2z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M8 36a4 4 0 100 8 4 4 0 000-8zm-6 4a6 6 0 1112 0 6 6 0 01-12 0zm38-4a4 4 0 100 8 4 4 0 000-8zm-6 4a6 6 0 1112 0 6 6 0 01-12 0zm-10-4a4 4 0 100 8 4 4 0 000-8zm-6 4a6 6 0 1112 0 6 6 0 01-12 0z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
               <path
                 fill='var(--icons-secondary, #454c59)'

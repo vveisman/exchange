@@ -68,9 +68,9 @@ const Shop = () => {
             //   className='text-gray-500 flex-shrink-0'
           >
             <path
-              fill-rule='evenodd'
+              fillRule='evenodd'
               d='M2.707 4.293L8 9.585l5.293-5.292a1 1 0 111.414 1.414l-6 6a.996.996 0 01-.53.277l-.118.014h-.118a.997.997 0 01-.648-.29l-6-6a1 1 0 011.414-1.415z'
-              clip-rule='evenodd'
+              clipRule='evenodd'
             ></path>
           </svg>
           {open && (
@@ -100,9 +100,9 @@ const Shop = () => {
               className='reflect-element ml-1 cursor-pointer'
             >
               <path
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M16 8.2V4c0-.6-.4-1-1-1h-4.2c-.6 0-1 .4-1 1s.4 1 1 1h1.8l-1.3 1.3-1.2 1.2L8 9.6 5.9 7.4c-.5-.4-1.3-.4-1.8 0L.7 10.8c-.4.4-.4 1 0 1.4s1 .4 1.4 0L5 9.4l2.1 2.1c.5.5 1.2.5 1.7 0L11.5 9l1.2-1.2L14 6.4v1.8c0 .6.4 1 1 1s1-.4 1-1z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
             </svg>
           </span>
@@ -116,9 +116,9 @@ const Shop = () => {
           className='w-[100%] relative px-2 cursor-pointer active:shadow-sm active:shadow-appAsh flex justify-between items-center h-[49.6px] hover:bg-[#f8f8f8] active:bg-[#f8f8f8] rounded-[4px] border border-appAsh'
         >
           <h4 className='text-[#333] ml-2'>Select payment method (350+)</h4>
-          <button className='border font-semibold text-[#333] border-appBlue rounded-[4px] px-[12px] py-[3px]'>
+          <p className='border font-semibold text-[#333] border-appBlue rounded-[4px] px-[12px] py-[3px]'>
             Show All
-          </button>
+          </p>
         </button>
         <div className='flex items-center overflow-x-scroll justify-between mt-2'>
           {payments.map((item) => (
@@ -149,9 +149,9 @@ const Shop = () => {
               className='flex-shrink-0 ml-2 ml-xs-2_5 _7jVIO'
             >
               <path
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M2.707 4.293L8 9.585l5.293-5.292a1 1 0 111.414 1.414l-6 6a.996.996 0 01-.53.277l-.118.014h-.118a.997.997 0 01-.648-.29l-6-6a1 1 0 011.414-1.415z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
             </svg>
           </p>

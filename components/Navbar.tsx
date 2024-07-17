@@ -45,9 +45,9 @@ const Navbar = () => {
             className='mr-2 reflect-element'
           >
             <path
-              fill-rule='evenodd'
+              fillRule='evenodd'
               d='M8 2a6 6 0 100 12A6 6 0 008 2zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM7 3.5a1 1 0 00-.707.293l-.5.5a1 1 0 001.414 1.414l.207-.207h1.172l.393.393-1.426.713A1 1 0 007 7.5V8a1 1 0 001.993.122l1.454-.728A1 1 0 0011 6.5v-1a1 1 0 00-.293-.707l-1-1A1 1 0 009 3.5H7z'
-              clip-rule='evenodd'
+              clipRule='evenodd'
             ></path>
           </svg>
           <span className='text-[.875rem] font-semibold text-white'>Help</span>
@@ -164,9 +164,9 @@ const Navbar = () => {
                 className='reflect-element'
               >
                 <path
-                  fill-rule='evenodd'
+                  fillRule='evenodd'
                   d='M4.294 13.292l5.292-5.293-5.292-5.293a1 1 0 111.414-1.414l6 6a.99.99 0 01.277.53L12 7.94v.118a.996.996 0 01-.291.648l-6 6a1 1 0 11-1.414-1.414z'
-                  clip-rule='evenodd'
+                  clipRule='evenodd'
                 ></path>
               </svg>
             </div>
@@ -182,9 +182,9 @@ const Navbar = () => {
                 className='reflect-element'
               >
                 <path
-                  fill-rule='evenodd'
+                  fillRule='evenodd'
                   d='M4.294 13.292l5.292-5.293-5.292-5.293a1 1 0 111.414-1.414l6 6a.99.99 0 01.277.53L12 7.94v.118a.996.996 0 01-.291.648l-6 6a1 1 0 11-1.414-1.414z'
-                  clip-rule='evenodd'
+                  clipRule='evenodd'
                 ></path>
               </svg>
             </div>
@@ -238,7 +238,10 @@ const Navbar = () => {
               router.includes("/volunteer") ? "text-docBlue" : ""
             }`}
           >
-            <Link className='mx-2' href={"/gift"}>
+            <Link
+              className='mx-2'
+              href={"https://paxful.com/sell-bitcoin#giftCardHub"}
+            >
               Gift Card Hub
             </Link>
             <div className='border-l active:shadow-sm active:shadow-black duration-200 transition-all px-1 hover:bg-slate-100 rounded-r-[4px] py-1 border-[#626262] flex items-center justify-center border-opacity-40 h-full'>

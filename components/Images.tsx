@@ -13,32 +13,32 @@ const Images = ({ title }: { title: string }) => {
             fill='var(--icons-bg-fill, #ffffff)'
             d='M9 19h6v19H9V19zm12 0h6v19h-6V19zm12 0h6v19h-6V19z'
           ></path>
-          <path fill='#00A5EF' fill-opacity='0.2' d='M9 19h6v19H9V19z'></path>
+          <path fill='#00A5EF' fillOpacity='0.2' d='M9 19h6v19H9V19z'></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M8 18h8v21H8V18zm2 2v17h4V20h-4z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
-          <path fill='#00A5EF' fill-opacity='0.2' d='M33 19h6v19h-6V19z'></path>
+          <path fill='#00A5EF' fillOpacity='0.2' d='M33 19h6v19h-6V19z'></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M32 18h8v21h-8V18zm2 2v17h4V20h-4z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
-          <path fill='#00A5EF' fill-opacity='0.2' d='M21 19h6v19h-6V19z'></path>
+          <path fill='#00A5EF' fillOpacity='0.2' d='M21 19h6v19h-6V19z'></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M20 18h8v21h-8V18zm2 2v17h4V20h-4z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M8 37a3 3 0 00-3 3v1a3 3 0 00-3 3v2h2v-2a1 1 0 011-1h38a1 1 0 011 1v2h2v-2a3 3 0 00-3-3v-1a3 3 0 00-3-3H8zm33 4v-1a1 1 0 00-1-1H8a1 1 0 00-1 1v1h34z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
@@ -47,9 +47,9 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M22.235 3.047a3 3 0 013.53 0L44.1 16.383c1.567 1.139.76 3.617-1.176 3.617H5.075c-1.937 0-2.743-2.478-1.176-3.617L22.235 3.047zm2.353 1.617a1 1 0 00-1.176 0L5.075 18h37.85L24.588 4.664z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
         </svg>
       );
@@ -63,15 +63,15 @@ const Images = ({ title }: { title: string }) => {
         >
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M10 23a3 3 0 013-3h32a3 3 0 013 3v16a3 3 0 01-3 3H13a3 3 0 01-3-3V23zm3-1a1 1 0 00-1 1v16a1 1 0 001 1h32a1 1 0 001-1V23a1 1 0 00-1-1H13z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M29 34a3 3 0 100-6 3 3 0 000 6zm0 2a5 5 0 100-10 5 5 0 000 10z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
@@ -89,9 +89,9 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M0 9a3 3 0 013-3h32a3 3 0 013 3v16a3 3 0 01-3 3H3a3 3 0 01-3-3V9zm3-1a1 1 0 00-1 1v16a1 1 0 001 1h32a1 1 0 001-1V9a1 1 0 00-1-1H3z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-bg-fill, #ffffff)'
@@ -99,9 +99,9 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M19 14a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
         </svg>
       );
@@ -128,9 +128,9 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M5 5a3 3 0 013-3h32a3 3 0 013 3v16a3 3 0 01-3 3H8a3 3 0 01-3-3V5zm3-1a1 1 0 00-1 1v16a1 1 0 001 1h32a1 1 0 001-1V5a1 1 0 00-1-1H8z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-bg-fill, #ffffff)'
@@ -138,9 +138,9 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M24 16a3 3 0 100-6 3 3 0 000 6zm0 2a5 5 0 100-10 5 5 0 000 10z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
@@ -157,15 +157,15 @@ const Images = ({ title }: { title: string }) => {
         >
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M10 9a3 3 0 013-3h32a3 3 0 013 3v18a3 3 0 01-3 3H13a3 3 0 01-3-3V9zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h32a1 1 0 001-1V9a1 1 0 00-1-1H13z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M26 14a1 1 0 100 2 1 1 0 000-2zm-3 1a3 3 0 116 0 3 3 0 01-6 0zm11 5a1 1 0 100 2 1 1 0 000-2zm-3 1a3 3 0 116 0 3 3 0 01-6 0z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
@@ -187,15 +187,15 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M0 21a3 3 0 013-3h32a3 3 0 013 3v18a3 3 0 01-3 3H3a3 3 0 01-3-3V21zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h32a1 1 0 001-1V21a1 1 0 00-1-1H3z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M16 26a1 1 0 100 2 1 1 0 000-2zm-3 1a3 3 0 116 0 3 3 0 01-6 0zm11 5a1 1 0 100 2 1 1 0 000-2zm-3 1a3 3 0 116 0 3 3 0 01-6 0z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
@@ -212,15 +212,15 @@ const Images = ({ title }: { title: string }) => {
         >
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M10 9a3 3 0 013-3h32a3 3 0 013 3v18a3 3 0 01-3 3H13a3 3 0 01-3-3V9zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h32a1 1 0 001-1V9a1 1 0 00-1-1H13z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M26 14a1 1 0 100 2 1 1 0 000-2zm-3 1a3 3 0 116 0 3 3 0 01-6 0zm11 5a1 1 0 100 2 1 1 0 000-2zm-3 1a3 3 0 116 0 3 3 0 01-6 0z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
@@ -242,15 +242,15 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M0 21a3 3 0 013-3h32a3 3 0 013 3v18a3 3 0 01-3 3H3a3 3 0 01-3-3V21zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h32a1 1 0 001-1V21a1 1 0 00-1-1H3z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M16 26a1 1 0 100 2 1 1 0 000-2zm-3 1a3 3 0 116 0 3 3 0 01-6 0zm11 5a1 1 0 100 2 1 1 0 000-2zm-3 1a3 3 0 116 0 3 3 0 01-6 0z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
@@ -281,15 +281,15 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M18 21a3 3 0 013-3h6a1 1 0 110 2h-6a1 1 0 00-1 1v3a1 1 0 11-2 0v-3z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M12 15a3 3 0 013-3h18a3 3 0 013 3v18a3 3 0 01-3 3H15a3 3 0 01-3-3V15zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h18a1 1 0 001-1V15a1 1 0 00-1-1H15z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
@@ -297,9 +297,9 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M20 2a1 1 0 011 1v2h2V4a1 1 0 112 0v1h2V3a1 1 0 112 0v2h2V4a1 1 0 112 0v1h2V3a1 1 0 112 0v2h3a3 3 0 013 3v3h2a1 1 0 110 2h-2v2h1a1 1 0 110 2h-1v2h2a1 1 0 110 2h-2v2h1a1 1 0 110 2h-1v2h2a1 1 0 110 2h-2v2h1a1 1 0 110 2h-1v2h2a1 1 0 110 2h-2v3a3 3 0 01-3 3h-3v2a1 1 0 11-2 0v-2h-2v1a1 1 0 11-2 0v-1h-2v2a1 1 0 11-2 0v-2h-2v1a1 1 0 11-2 0v-1h-2v2a1 1 0 11-2 0v-2h-2v1a1 1 0 11-2 0v-1h-2v2a1 1 0 11-2 0v-2H8a3 3 0 01-3-3v-3H3a1 1 0 110-2h2v-2H4a1 1 0 110-2h1v-2H3a1 1 0 110-2h2v-2H4a1 1 0 110-2h1v-2H3a1 1 0 110-2h2v-2H4a1 1 0 110-2h1v-2H3a1 1 0 110-2h2V8a3 3 0 013-3h3V3a1 1 0 112 0v2h2V4a1 1 0 112 0v1h2V3a1 1 0 011-1zM8 7a1 1 0 00-1 1v32a1 1 0 001 1h32a1 1 0 001-1V8a1 1 0 00-1-1H8z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
@@ -320,9 +320,9 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M6 20h36v24h4v2H2v-2h4V20zm2 2h32v22H22V28H12v16H8V22zm12 8v14h-6V30h6zm11-2a5 5 0 00-5 5v3h10v-3a5 5 0 00-5-5zm3 6v-1a3 3 0 10-6 0v1h6z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='#00A5EF'
@@ -336,9 +336,9 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M9 5a3 3 0 013-3h24a3 3 0 013 3v1.764l6.17 12.342A2 2 0 0143.383 22H4.618a2 2 0 01-1.789-2.894L9 6.764V5zm1.618 3h26.764l6 12H4.618l1-2H24v-2H6.618l4-8zM37 5v1H11V5a1 1 0 011-1h24a1 1 0 011 1z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
         </svg>
       );
@@ -351,21 +351,21 @@ const Images = ({ title }: { title: string }) => {
         >
           <path
             fill='var(--icons-secondary, #454c59)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M10 21a3 3 0 013-3h32a3 3 0 013 3v18a3 3 0 01-3 3H13a3 3 0 01-3-3V21zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h32a1 1 0 001-1V21a1 1 0 00-1-1H13z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-bg-fill, #ffffff)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M20 29.465a4 4 0 110-6.93 4 4 0 110 6.93z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-bg-fill, #ffffff)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M20 27.154l1.002.58a2 2 0 100-3.467L20 24.845l-1.002-.58a2 2 0 100 3.467L20 27.155zm0-4.619a4 4 0 100 6.93 4 4 0 100-6.93z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-secondary, #454c59)'
@@ -387,21 +387,21 @@ const Images = ({ title }: { title: string }) => {
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M0 9a3 3 0 013-3h32a3 3 0 013 3v18a3 3 0 01-3 3H3a3 3 0 01-3-3V9zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h32a1 1 0 001-1V9a1 1 0 00-1-1H3z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-bg-fill, #ffffff)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M10 17.465a4 4 0 110-6.93 4 4 0 110 6.93z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M10 15.154l1.002.58a2 2 0 100-3.467L10 12.845l-1.001-.58a2 2 0 100 3.467L10 15.155zm0-4.619a4 4 0 100 6.93 4 4 0 100-6.93z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
           <path
             fill='var(--icons-primary, #0097db)'

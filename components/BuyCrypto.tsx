@@ -20,9 +20,9 @@ const BuyCrypto = ({ src, title }: { src: string; title: string }) => {
           className='reflect-element'
         >
           <path
-            fill-rule='evenodd'
+            fillRule='evenodd'
             d='M4.294 13.292l5.292-5.293-5.292-5.293a1 1 0 111.414-1.414l6 6a.99.99 0 01.277.53L12 7.94v.118a.996.996 0 01-.291.648l-6 6a1 1 0 11-1.414-1.414z'
-            clip-rule='evenodd'
+            clipRule='evenodd'
           ></path>
         </svg>
       </div>

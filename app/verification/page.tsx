@@ -140,9 +140,9 @@ const Index = () => {
               } duration-200  ml-2 transition-all`}
             >
               <path
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M2.707 4.293L8 9.585l5.293-5.292a1 1 0 111.414 1.414l-6 6a.996.996 0 01-.53.277l-.118.014h-.118a.997.997 0 01-.648-.29l-6-6a1 1 0 011.414-1.415z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
               ></path>
             </svg>
             {/* <svg
@@ -183,9 +183,9 @@ const Index = () => {
             className='mr-2 text-primary reflect-element'
           >
             <path
-              fill-rule='evenodd'
+              fillRule='evenodd'
               d='M11.706 13.292L6.414 7.999l5.292-5.293a1 1 0 00-1.414-1.414l-6 6a.996.996 0 00-.277.53L4 7.94v.118c.014.236.11.468.291.648l6 6a1 1 0 101.414-1.414z'
-              clip-rule='evenodd'
+              clipRule='evenodd'
             ></path>
           </svg>
           {/* TO do -  6 dingle digit input fields for auth coce */}

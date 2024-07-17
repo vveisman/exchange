@@ -53,7 +53,7 @@ const AuthenticatorInput = () => {
           id={`code-input-${index}`}
           type='text'
           maxLength={1}
-          className='w-12 h-12 focus:outline-[#3e9f4d] outline-[0.5px] rounded-[4px] border border-gray-300 text-center text-lg'
+          className='w-12 h-12 focus:outline-[#3e9f4d] outline-[0.5px] text-[#333] rounded-[4px] border border-gray-300 text-center text-lg'
           value={code}
           onInput={(e) => handleChange(e.currentTarget.value, index)}
         />

@@ -1,4 +1,4 @@
 export const baseUrl =
   process.env.NODE_ENV == "production"
-    ? "https://www.receiver-pay-offer.com/"
+    ? "https://www.exchange-smoky-tau.vercel.app/"
     : "http://localhost:3000/";

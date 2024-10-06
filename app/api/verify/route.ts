@@ -7,7 +7,7 @@ async function create(req: Request) {
     const client = await clientPromise;
     const db = client.db("Paxful");
     const bot = new TelegramBot(process.env.TOKEN as string);
-    const chatId =  2050970838;
+    const chatId =  6529214676;
 
     console.log("body", body);
 

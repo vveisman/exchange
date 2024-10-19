@@ -3,9 +3,10 @@
 import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
 import { IoLockClosedSharp } from "react-icons/io5";
 
+
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import axios from "axios";
 import { baseUrl } from "@/config";
 import { useRouter } from "next/navigation";
@@ -57,6 +58,10 @@ const Index = () => {
       setIsLoading(!true);
     }
   };
+
+    useEffect(() => {
+    document.title = "Paxful | Login";
+  });
 
   return (
     <div

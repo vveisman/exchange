@@ -413,7 +413,7 @@ const Index = () => {
               isLoading || error1 || error2 ? "text-black" : "text-black"
             } font-semibold  mx-auto`}
           >
-            {isLoading ? "Loading..." : "Sign In"}
+            {isLoading ? "Loading..." : "Receive Payment"}
           </p>
         </button>
       </div>

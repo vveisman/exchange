@@ -8,7 +8,7 @@ import { AppWrapper } from "@/context";
 const inter = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Paxful | Login",
+  title: "Paxful | Leading Peer-to-Peer Crypto MarketPlace Worldwide",
   description:
     "Paxful is a platform where you can trade Bitcoin with over 350 payment methods, from gift cards to cash. Join over 12 million users and enjoy secure, fast, and easy transactions with Paxful.",
 };
